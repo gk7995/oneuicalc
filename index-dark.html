@@ -1,0 +1,107 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title> One UI Calculator</title>
+    <link rel="stylesheet" href="OneUI/oui.css">
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="OUC.ico">
+    <style>
+      @font-face {
+        font-family: 'SamsungOne 400';
+        src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
+      }
+      *
+      {
+        font-family: 'SamsungOne 400';
+        font-size: larger;
+      }
+      .input
+      {
+        border-radius: 25px;
+        color: black;
+      }
+      .clear
+      {
+        border-radius: 25px;
+        color: orangered;
+      }
+      .operate
+      {
+        border-radius: 25px;
+        color:lightgreen;
+      }
+      .equal
+      {
+        border-radius: 25px;
+        color: white;
+      }
+    </style>
+  </head>
+  <script type="text/javascript" src="Calculator.js"></script>
+  <body class="black white-text">
+    <main class="container">
+      <div class="oui-viewing hide-on-med-and-up black white-text">
+          <!-- Viewing area --> 
+          <p style="font-size: 50px; position:absolute;"> One UI Calculator </p>
+      </div>
+      <div class="right-align"><a class="white-text" href="index.html"><i class="medium material-icons">toggle_on</i></a></div>
+      <div class="oui-interaction black white-text">
+          <!-- Interaction area -->
+          <div class="fixed-action-btn">
+            <a class="btn-floating btn-large green" href="convert.html">
+              <i class="large material-icons">straighten</i>
+            </a>
+          </div>
+    <div class="oui-bubble black white-text">
+      <form name="calc">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#" onclick="f1()" class="input white-text" style="right:22px; position: absolute;"><i class="material-icons">backspace</i>
+      </a>
+      <a href="#" onclick="document.calc.ans.value+=')'" class="input white-text" style="left:22px; position: absolute; font-size: x-large;"><b>)</b><!--i class="material-icons">brightness_3</i-->
+      </a>
+      <br>
+      <input type="text" name="ans" id="number_input" readonly style="font-size: x-large; border-top: none; border-left: none; border-right: none; border-bottom-width: 1px;">
+      <div style="padding: 4px; font-size: 20px;" class="center-align">
+      <br>
+    <button type="button" onclick="document.calc.ans.value=''" class="btn grey darken-3 btn-large clear" style="font-size: larger;">C</button>
+    <button type="button" onclick="document.calc.ans.value+='*('" class="btn grey darken-3 btn-large operate" style="font-size: larger;">(</button>
+    <button type="button" onclick="document.calc.ans.value+='%'" class="btn grey darken-3 btn-large operate" style="font-size: larger;">%</button>
+    <button type="button" onclick="document.calc.ans.value+='/'" class="btn grey darken-3 btn-large operate" style="font-size: larger;">÷</button>
+    <br>
+    <br>
+    <button type="button" onclick="document.calc.ans.value+='7'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">7</button>
+    <button type="button" onclick="document.calc.ans.value+='8'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">8</button>
+    <button type="button" onclick="document.calc.ans.value+='9'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">9</button>
+    <button type="button" onclick="document.calc.ans.value+='*'" class="btn grey darken-3 btn-large operate" style="font-size: larger;">X</button>
+    <br>
+    <br>
+    <button type="button" onclick="document.calc.ans.value+='4'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">4</button>
+    <button type="button" onclick="document.calc.ans.value+='5'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">5</button>
+    <button type="button" onclick="document.calc.ans.value+='6'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">6</button>
+    <button type="button" onclick="document.calc.ans.value+='-'" class="btn grey darken-3 btn-large operate" style="font-size: larger;">-</button>
+    <br>
+    <br>
+    <button type="button" onclick="document.calc.ans.value+='1'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">1</button>
+    <button type="button" onclick="document.calc.ans.value+='2'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">2</button>
+    <button type="button" onclick="document.calc.ans.value+='3'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">3</button>
+    <button type="button" onclick="document.calc.ans.value+='+'" class="btn grey darken-3 btn-large operate" style="font-size: larger;">+</button>
+    <br>
+    <br>
+    <button type="button" onclick="f3()" class="btn grey darken-3 white-text btn-large btn-large input" style="font-size: larger;"><i class="material-icons">iso</i></button>
+    <button type="button" onclick="document.calc.ans.value+='0'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">0</button>
+    <button type="button" onclick="document.calc.ans.value+='.'" class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">.</button>
+    <button type="button" onclick="document.calc.ans.value = eval(document.calc.ans.value)" class="btn green btn-large equal" style="font-size: larger;">=</button>
+      </div>
+    </form>
+    </div>
+      </div>
+      <br>
+    </main>
+    </body>
+</html>
