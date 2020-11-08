@@ -41,15 +41,18 @@
   </style>
 </head>
 <script type="text/javascript" src="Calculator.js"></script>
-
-<body>
+<script>
+  function msg(){
+    alert("Closing Parenthesis is must, provided on the left side as ')'");
+  }
+</script>
+<body onload="msg()">
   <main class="container">
     <div class="oui-viewing hide-on-med-and-up">
       <!-- Viewing area -->
-      <p style="font-size: 50px; position:absolute;"> One UI Calculator </p>
+      <p style="font-size: 50px;"> One UI Calculator </p>
+      <p style="font-size: 14px;">Closing Parenthesis is must, provided on the left side as ')'</p>
     </div>
-    <div class="right-align"><a class="black-text" href="index-dark.html"><i
-          class="medium material-icons">toggle_off</i></a></div>
     <div class="oui-interaction">
       <!-- Interaction area -->
       <div class="fixed-action-btn">
@@ -58,6 +61,9 @@
         </a>
       </div>
       <div class="oui-bubble">
+        <div class="right-align"><a class="black-text" href="index-dark.html"><i
+              class="medium material-icons">toggle_off</i></a>
+        </div>
         <form name="calc">
           <br>
           <br>
@@ -68,7 +74,7 @@
               class="material-icons">backspace</i>
           </a>
           <a href="#" onclick="document.calc.ans.value+=')'" class="input"
-            style="left:22px; position: absolute; font-size: larger;"><b>)</b>
+            style="left:22px; position: absolute; font-size: x-large;"><b>)</b>
             <!--i class="material-icons">brightness_3</i-->
           </a>
           <br>
