@@ -81,7 +81,6 @@
           <input type="text" name="ans" id="number_input" readonly
             style="font-size: x-large; border-top: none; border-left: none; border-right: none; border-bottom-width: 1px;">
           <div style="padding: 4px; font-size: 20px;" class="center-align">
-            <br>
             <button type="button" onclick="document.calc.ans.value=''" class="btn grey lighten-4 btn-large clear"
               style="font-size: larger;">C</button>
             <button type="button" onclick="document.calc.ans.value+='*('" class="btn grey lighten-4 btn-large operate"
@@ -122,7 +121,7 @@
               style="font-size: larger;">+</button>
             <br>
             <br>
-            <button type="button" onclick="f3()" class="btn grey lighten-4 btn-large btn-large input"
+            <button type="button" onclick="f3()" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;"><i class="material-icons">iso</i></button>
             <button type="button" onclick="document.calc.ans.value+='0'" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">0</button>
@@ -130,11 +129,23 @@
               style="font-size: larger;">.</button>
             <button type="button" onclick="document.calc.ans.value = eval(document.calc.ans.value)"
               class="btn green btn-large equal" style="font-size: larger;">=</button>
+            <br>
+            <br>
+            <hr style="border: dashed 1px black;">
+            <button type="button" onclick="f9()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">1/</button>
+            <button type="button" onclick="document.calc.ans.value+='**'" class="btn grey lighten-4 btn-large input" style="font-size: larger;">^</button>
+            <button type="button" onclick="f6()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">&pi;</button>
+            <button type="button" onclick="f4()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">!</button>
+            <br>
+            <br>
+            <button type="button" onclick="f5()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">²</button>
+            <button type="button" onclick="f8()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">³</button>
+            <button type="button" onclick="f2()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">&#8730;</button>
+            <button type="button" onclick="f7()" class="btn grey lighten-4 btn-large input" style="font-size: larger;">&#8731;</button>
           </div>
         </form>
       </div>
     </div>
   </main>
 </body>
-
 </html>
