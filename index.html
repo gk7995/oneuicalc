@@ -41,9 +41,10 @@
   </style>
 </head>
 <script type="text/javascript" src="Calculator.js"></script>
+<script type="text/javascript" src="materialize.js"></script>
 <!--script>
   function msg(){
-    alert("Closing Parenthesis is must, provided on the left side as ')'");
+    alert("");
   }
 </script-->
 
@@ -51,8 +52,8 @@
   <main class="container">
     <div class="oui-viewing hide-on-med-and-up">
       <!-- Viewing area -->
-      <p style="font-size: 50px;"> One UI Calculator </p>
-      <p style="font-size: 14px;">Closing Parenthesis is must, provided on the left side as ')'</p>
+      <p style="font-size: 42px;"> One UI Calculator </p>
+      <p style="font-size: 14px;"> Tap ')' on the left side to complete mathematic operations</p>
     </div>
     <div class="oui-interaction">
       <!-- Interaction area -->
@@ -61,9 +62,9 @@
           <i class="large material-icons">straighten</i>
         </a>
       </div>
-      <div class="oui-bubble">
-        <div class="right-align"><a class="black-text" href="index-dark.html"><i
-              class="medium material-icons">toggle_off</i></a>
+      <div class="oui-bubble" id="page">
+        <div class="right-align"><a class="black-text" href="index-dark.html">&#9728;<i
+              class="medium material-icons">toggle_off</i>&#9790;</a>
         </div>
         <form name="calc">
           <br>
@@ -71,10 +72,10 @@
           <br>
           <br>
           <br>
-          <a href="#" onclick="f1()" class="input" style="right:22px; position: absolute;"><i
+          <a href="index.html#page" onclick="f1()" class="input" style="right:22px; position: absolute;"><i
               class="material-icons">backspace</i>
           </a>
-          <a href="#" onclick="document.calc.ans.value+=')'" class="input"
+          <a href="index.html#page" onclick="document.calc.ans.value+=')'" class="input"
             style="left:22px; position: absolute; font-size: x-large;"><b>)</b>
             <!--i class="material-icons">brightness_3</i-->
           </a>
@@ -123,7 +124,7 @@
             <br>
             <br>
             <button type="button" onclick="f3()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;"><i class="material-icons">iso</i></button>
+              style="font-size: larger;">&#177;</button>
             <button type="button" onclick="document.calc.ans.value+='0'" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">0</button>
             <button type="button" onclick="document.calc.ans.value+='.'" class="btn grey lighten-4 btn-large input"
@@ -132,13 +133,13 @@
               class="btn green btn-large equal" style="font-size: larger;">=</button>
             <br>
             <br>
-            <hr style="border: dashed 1px black;">
+            <hr style="border: dashed 0.5px black;">
             <button type="button" onclick="f9()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">1/</button>
+              style="font-size: larger;">&#8543;</button>
             <button type="button" onclick="document.calc.ans.value+='**'" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">^</button>
+              style="font-size: larger;">&#8743;</button>
             <button type="button" onclick="f6()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">&pi;</button>
+              style="font-size: larger;">&#8508;</button>
             <button type="button" onclick="f4()" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">!</button>
             <br>
