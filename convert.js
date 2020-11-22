@@ -219,76 +219,76 @@ function VoluConv(source, valnum3) {
     var cuih = document.getElementById("cuih");
     var cuft = document.getElementById("cuft");
     if (source == "gal") {
-        GAL.value = (valnum * 1.2009499255).toFixed(10);
-        l.value = (valnum * 4.54609).toFixed(4);
-        ml.value = (valnum * 4546.09).toFixed(2);
-        cucm.value = (valnum * 4546.09).toFixed(2);
-        cums.value = (valnum * 0.00454609).toFixed(8);
-        cuih.value = (valnum * 277.4194327916).toFixed(10);
-        cuft.value = (valnum * 0.1605436532).toFixed(10);
+        GAL.value = (valnum3 * 1.2009499255).toFixed(10);
+        l.value = (valnum3 * 4.54609).toFixed(4);
+        ml.value = (valnum3 * 4546.09).toFixed(2);
+        cucm.value = (valnum3 * 4546.09).toFixed(2);
+        cums.value = (valnum3 * 0.00454609).toFixed(8);
+        cuih.value = (valnum3 * 277.4194327916).toFixed(10);
+        cuft.value = (valnum3 * 0.1605436532).toFixed(10);
     }
     if (source == "GAL") {
-        gal.value = (valnum * 0.8326741846).toFixed(10);
-        l.value = (valnum * 3.785411784).toFixed(9);
-        ml.value = (valnum * 3785.411784).toFixed(6);
-        cucm.value = (valnum * 3785.411784).toFixed(6);
-        cums.value = (valnum * 0.0037854118).toFixed(10);
-        cuih.value = (valnum * 231).toFixed();
-        cuft.value = (valnum * 0.1336805556).toFixed(10);
+        gal.value = (valnum3 * 0.8326741846).toFixed(10);
+        l.value = (valnum3 * 3.785411784).toFixed(9);
+        ml.value = (valnum3 * 3785.411784).toFixed(6);
+        cucm.value = (valnum3 * 3785.411784).toFixed(6);
+        cums.value = (valnum3 * 0.0037854118).toFixed(10);
+        cuih.value = (valnum3 * 231).toFixed();
+        cuft.value = (valnum3 * 0.1336805556).toFixed(10);
     }
     if (source == "l") {
-        gal.value = (valnum * 0.2199692483).toFixed(10);
-        GAL.value = (valnum * 0.2641720524).toFixed(10);
-        ml.value = (valnum * 1000).toFixed();
-        cucm.value = (valnum * 1000).toFixed();
-        cums.value = (valnum * 0.001).toFixed(3);
-        cuih.value = (valnum * 61.0237440947).toFixed(10);
-        cuft.value = (valnum * 0.0353146667).toFixed(10);
+        gal.value = (valnum3 * 0.2199692483).toFixed(10);
+        GAL.value = (valnum3 * 0.2641720524).toFixed(10);
+        ml.value = (valnum3 * 1000).toFixed();
+        cucm.value = (valnum3 * 1000).toFixed();
+        cums.value = (valnum3 * 0.001).toFixed(3);
+        cuih.value = (valnum3 * 61.0237440947).toFixed(10);
+        cuft.value = (valnum3 * 0.0353146667).toFixed(10);
     }
     if (source == "ml") {
-        gal.value = (valnum * 0.0002199692).toFixed(10);
-        GAL.value = (valnum * 0.0002641721).toFixed(10);
-        l.value = (valnum * 0.0001).toFixed(4);
-        cucm.value = (valnum * 1).toFixed();
-        cums.value = (valnum * 0.000001).toFixed(6);
-        cuih.value = (valnum * 0.0610237441).toFixed(10);
-        cuft.value = (valnum * 0.0000353147).toFixed(10);
+        gal.value = (valnum3 * 0.0002199692).toFixed(10);
+        GAL.value = (valnum3 * 0.0002641721).toFixed(10);
+        l.value = (valnum3 * 0.0001).toFixed(4);
+        cucm.value = (valnum3 * 1).toFixed();
+        cums.value = (valnum3 * 0.000001).toFixed(6);
+        cuih.value = (valnum3 * 0.0610237441).toFixed(10);
+        cuft.value = (valnum3 * 0.0000353147).toFixed(10);
     }
     if (source == "cucm") {
-        gal.value = (valnum * 0.0002199692).toFixed(10);
-        GAL.value = (valnum * 0.0002641721).toFixed(10);
-        l.value = (valnum * 0.0001).toFixed(4);
-        ml.value = (valnum * 1).toFixed();
-        cums.value = (valnum * 0.000001).toFixed(6);
-        cuih.value = (valnum * 0.0610237441).toFixed(10);
-        cuft.value = (valnum * 0.0000353147).toFixed(10);
+        gal.value = (valnum3 * 0.0002199692).toFixed(10);
+        GAL.value = (valnum3 * 0.0002641721).toFixed(10);
+        l.value = (valnum3 * 0.0001).toFixed(4);
+        ml.value = (valnum3 * 1).toFixed();
+        cums.value = (valnum3 * 0.000001).toFixed(6);
+        cuih.value = (valnum3 * 0.0610237441).toFixed(10);
+        cuft.value = (valnum3 * 0.0000353147).toFixed(10);
     }
     if (source == "cums") {
-        gal.value = (valnum * 219.9692482991).toFixed(10);
-        GAL.value = (valnum * 264.1720523581).toFixed(10);
-        l.value = (valnum * 1000).toFixed();
-        ml.value = (valnum * 1000000).toFixed();
-        cucm.value = (valnum * 1000000).toFixed();
-        cuih.value = (valnum * 61023.744094732).toFixed(9);
-        cuft.value = (valnum * 35.3146667215).toFixed(10);
+        gal.value = (valnum3 * 219.9692482991).toFixed(10);
+        GAL.value = (valnum3 * 264.1720523581).toFixed(10);
+        l.value = (valnum3 * 1000).toFixed();
+        ml.value = (valnum3 * 1000000).toFixed();
+        cucm.value = (valnum3 * 1000000).toFixed();
+        cuih.value = (valnum3 * 61023.744094732).toFixed(9);
+        cuft.value = (valnum3 * 35.3146667215).toFixed(10);
     }
     if (source == "cuih") {
-        gal.value = (valnum * 0.0036046501).toFixed(10);
-        GAL.value = (valnum * 0.0043290043).toFixed(10);
-        l.value = (valnum * 0.016387064).toFixed(9);
-        ml.value = (valnum * 16.387064).toFixed(6);
-        cucm.value = (valnum * 16.387064).toFixed(6);
-        cums.value = (valnum * 0.0000163871).toFixed(10);
-        cuft.value = (valnum * 0.0005787037).toFixed(10);
+        gal.value = (valnum3 * 0.0036046501).toFixed(10);
+        GAL.value = (valnum3 * 0.0043290043).toFixed(10);
+        l.value = (valnum3 * 0.016387064).toFixed(9);
+        ml.value = (valnum3 * 16.387064).toFixed(6);
+        cucm.value = (valnum3 * 16.387064).toFixed(6);
+        cums.value = (valnum3 * 0.0000163871).toFixed(10);
+        cuft.value = (valnum3 * 0.0005787037).toFixed(10);
     }
     if (source == "cuft") {
-        gal.value = (valnum * 6.228835459).toFixed(9);
-        GAL.value = (valnum * 7.4805194805).toFixed(10);
-        l.value = (valnum * 28.316846592).toFixed(9);
-        ml.value = (valnum * 28316.846592).toFixed(6);
-        cucm.value = (valnum * 28316.846592).toFixed(6);
-        cums.value = (valnum * 0.0283168466).toFixed(10);
-        cuih.value = (valnum * 1728).toFixed();
+        gal.value = (valnum3 * 6.228835459).toFixed(9);
+        GAL.value = (valnum3 * 7.4805194805).toFixed(10);
+        l.value = (valnum3 * 28.316846592).toFixed(9);
+        ml.value = (valnum3 * 28316.846592).toFixed(6);
+        cucm.value = (valnum3 * 28316.846592).toFixed(6);
+        cums.value = (valnum3 * 0.0283168466).toFixed(10);
+        cuih.value = (valnum3 * 1728).toFixed();
     }
 }
 
@@ -302,60 +302,60 @@ function MassConv(source, valnum4) {
     var kg = document.getElementById("kg");
     var g = document.getElementById("g");
     if (source == "t") {
-        ukt.value = (valnum * 0.9842065276).toFixed(10);
-        ust.value = (valnum * 1.1023113109).toFixed(10);
-        lb.value = (valnum * 2204.6226218488).toFixed(10);
-        oz.value = (valnum * 35273.96194958).toFixed(8);
-        kg.value = (valnum * 1000).toFixed();
-        g.value = (valnum * 1000000).toFixed();
+        ukt.value = (valnum4 * 0.9842065276).toFixed(10);
+        ust.value = (valnum4 * 1.1023113109).toFixed(10);
+        lb.value = (valnum4 * 2204.6226218488).toFixed(10);
+        oz.value = (valnum4 * 35273.96194958).toFixed(8);
+        kg.value = (valnum4 * 1000).toFixed();
+        g.value = (valnum4 * 1000000).toFixed();
     }
     if (source == "ukt") {
-        t.value = (valnum * 1.0160469088).toFixed(10);
-        ust.value = (valnum * 1.12).toFixed(2);
-        lb.value = (valnum * 2240).toFixed();
-        oz.value = (valnum * 35840).toFixed();
-        kg.value = (valnum * 1016.0469088).toFixed(7);
-        g.value = (valnum * 1016046.9088).toFixed(4);
+        t.value = (valnum4 * 1.0160469088).toFixed(10);
+        ust.value = (valnum4 * 1.12).toFixed(2);
+        lb.value = (valnum4 * 2240).toFixed();
+        oz.value = (valnum4 * 35840).toFixed();
+        kg.value = (valnum4 * 1016.0469088).toFixed(7);
+        g.value = (valnum4 * 1016046.9088).toFixed(4);
     }
     if (source == "ust") {
-        t.value = (valnum * 0.90718474).toFixed(8);
-        ukt.value = (valnum * 0.8928571429).toFixed(10);
-        lb.value = (valnum * 2000).toFixed();
-        oz.value = (valnum * 32000).toFixed();
-        kg.value = (valnum * 907.18474).toFixed(5);
-        g.value = (valnum * 907184.74).toFixed(2);
+        t.value = (valnum4 * 0.90718474).toFixed(8);
+        ukt.value = (valnum4 * 0.8928571429).toFixed(10);
+        lb.value = (valnum4 * 2000).toFixed();
+        oz.value = (valnum4 * 32000).toFixed();
+        kg.value = (valnum4 * 907.18474).toFixed(5);
+        g.value = (valnum4 * 907184.74).toFixed(2);
     }
     if (source == "lb") {
-        t.value = (valnum * 0.0004535924).toFixed(10);
-        ukt.value = (valnum * 0.0004464286).toFixed(10);
-        ust.value = (valnum * 0.0005).toFixed(4);
-        oz.value = (valnum * 16).toFixed();
-        kg.value = (valnum * 0.45359237).toFixed(8);
-        g.value = (valnum * 453.59237).toFixed(5);
+        t.value = (valnum4 * 0.0004535924).toFixed(10);
+        ukt.value = (valnum4 * 0.0004464286).toFixed(10);
+        ust.value = (valnum4 * 0.0005).toFixed(4);
+        oz.value = (valnum4 * 16).toFixed();
+        kg.value = (valnum4 * 0.45359237).toFixed(8);
+        g.value = (valnum4 * 453.59237).toFixed(5);
     }
     if (source == "oz") {
-        t.value = (valnum * 0.0000283495).toFixed(10);
-        ukt.value = (valnum * 0.0000279018).toFixed(10);
-        ust.value = (valnum * 0.00003125).toFixed(8);
-        lb.value = (valnum * 0.0625).toFixed(4);
-        kg.value = (valnum * 0.0283495231).toFixed(10);
-        g.value = (valnum * 28.349523125).toFixed(9);
+        t.value = (valnum4 * 0.0000283495).toFixed(10);
+        ukt.value = (valnum4 * 0.0000279018).toFixed(10);
+        ust.value = (valnum4 * 0.00003125).toFixed(8);
+        lb.value = (valnum4 * 0.0625).toFixed(4);
+        kg.value = (valnum4 * 0.0283495231).toFixed(10);
+        g.value = (valnum4 * 28.349523125).toFixed(9);
     }
     if (source == "kg") {
-        t.value = (valnum * 0.001).toFixed(3);
-        ukt.value = (valnum * 0.0009842065).toFixed(10);
-        ust.value = (valnum * 0.0011023113).toFixed(10);
-        lb.value = (valnum * 2.2046226218).toFixed(10);
-        oz.value = (valnum * 35.2739619496).toFixed(10);
-        g.value = (valnum * 1000).toFixed();
+        t.value = (valnum4 * 0.001).toFixed(3);
+        ukt.value = (valnum4 * 0.0009842065).toFixed(10);
+        ust.value = (valnum4 * 0.0011023113).toFixed(10);
+        lb.value = (valnum4 * 2.2046226218).toFixed(10);
+        oz.value = (valnum4 * 35.2739619496).toFixed(10);
+        g.value = (valnum4 * 1000).toFixed();
     }
     if (source == "g") {
-        t.value = (valnum * 0.000001).toFixed(6);
-        ukt.value = (valnum * 0.00000098421).toFixed(11);
-        ust.value = (valnum * 0.0000011023).toFixed(10);
-        lb.value = (valnum * 0.0022046226).toFixed(10);
-        oz.value = (valnum * 0.0352739619).toFixed(10);
-        kg.value = (valnum * 0.001).toFixed(3);
+        t.value = (valnum4 * 0.000001).toFixed(6);
+        ukt.value = (valnum4 * 0.00000098421).toFixed(11);
+        ust.value = (valnum4 * 0.0000011023).toFixed(10);
+        lb.value = (valnum4 * 0.0022046226).toFixed(10);
+        oz.value = (valnum4 * 0.0352739619).toFixed(10);
+        kg.value = (valnum4 * 0.001).toFixed(3);
     }
 }
 
@@ -368,46 +368,46 @@ function DataConv(source, valnum5) {
     var gb = document.getElementById("gb");
     var tb = document.getElementById("tb");
     if (source == "bit") {
-        b.value = (valnum * 0.125).toFixed(3);
-        kb.value = (valnum * 0.0001220703).toFixed(10);
-        mb.value = (valnum * 0.00000011921).toFixed(11);
-        gb.value = (valnum * 0.00000000011642).toFixed(14);
-        tb.value = (valnum * 0.00000000000011369).toFixed(17);
+        b.value = (valnum5 * 0.125).toFixed(3);
+        kb.value = (valnum5 * 0.0001220703).toFixed(10);
+        mb.value = (valnum5 * 0.00000011921).toFixed(11);
+        gb.value = (valnum5 * 0.00000000011642).toFixed(14);
+        tb.value = (valnum5 * 0.00000000000011369).toFixed(17);
     }
     if (source == "b") {
-        bit.value = (valnum * 8).toFixed();
-        kb.value = (valnum * 0.0009765625).toFixed(10);
-        mb.value = (valnum * 0.00000095367).toFixed(11);
-        gb.value = (valnum * 0.00000000093132).toFixed(14);
-        tb.value = (valnum * 0.00000000000090949).toFixed(17);
+        bit.value = (valnum5 * 8).toFixed();
+        kb.value = (valnum5 * 0.0009765625).toFixed(10);
+        mb.value = (valnum5 * 0.00000095367).toFixed(11);
+        gb.value = (valnum5 * 0.00000000093132).toFixed(14);
+        tb.value = (valnum5 * 0.00000000000090949).toFixed(17);
     }
     if (source == "kb") {
-        bit.value = (valnum * 8192).toFixed();
-        b.value = (valnum * 1024).toFixed();
-        mb.value = (valnum * 0.0009765625).toFixed(10);
-        gb.value = (valnum * 0.00000095367).toFixed(11);
-        tb.value = (valnum * 0.00000000093132).toFixed(14);
+        bit.value = (valnum5 * 8192).toFixed();
+        b.value = (valnum5 * 1024).toFixed();
+        mb.value = (valnum5 * 0.0009765625).toFixed(10);
+        gb.value = (valnum5 * 0.00000095367).toFixed(11);
+        tb.value = (valnum5 * 0.00000000093132).toFixed(14);
     }
     if (source == "mb") {
-        bit.value = (valnum * 8388608).toFixed();
-        b.value = (valnum * 1048576).toFixed();
-        kb.value = (valnum * 1024).toFixed();
-        gb.value = (valnum * 0.0009765625).toFixed(10);
-        tb.value = (valnum * 0.00000095367).toFixed(11);
+        bit.value = (valnum5 * 8388608).toFixed();
+        b.value = (valnum5 * 1048576).toFixed();
+        kb.value = (valnum5 * 1024).toFixed();
+        gb.value = (valnum5 * 0.0009765625).toFixed(10);
+        tb.value = (valnum5 * 0.00000095367).toFixed(11);
     }
     if (source == "gb") {
-        bit.value = (valnum * 8589934592).toFixed();
-        b.value = (valnum * 1073741824).toFixed();
-        kb.value = (valnum * 1048576).toFixed();
-        mb.value = (valnum * 1024).toFixed();
-        tb.value = (valnum * 0.0009765625).toFixed(10);
+        bit.value = (valnum5 * 8589934592).toFixed();
+        b.value = (valnum5 * 1073741824).toFixed();
+        kb.value = (valnum5 * 1048576).toFixed();
+        mb.value = (valnum5 * 1024).toFixed();
+        tb.value = (valnum5 * 0.0009765625).toFixed(10);
     }
     if (source == "tb") {
-        bit.value = (valnum * 8796093022208).toFixed();
-        b.value = (valnum * 1099511627776).toFixed();
-        kb.value = (valnum * 1073741824).toFixed();
-        mb.value = (valnum * 1048576).toFixed();
-        gb.value = (valnum * 1024).toFixed();
+        bit.value = (valnum5 * 8796093022208).toFixed();
+        b.value = (valnum5 * 1099511627776).toFixed();
+        kb.value = (valnum5 * 1073741824).toFixed();
+        mb.value = (valnum5 * 1048576).toFixed();
+        gb.value = (valnum5 * 1024).toFixed();
     }
 }
 
@@ -425,136 +425,136 @@ function SpeeConv(source, valnum6) {
     var mih = document.getElementById("mih");
     var kn = document.getElementById("kn");
     if (source == "mps") {
-        mph.value = (valnum * 3600).toFixed();
-        kps.value = (valnum * 0.001).toFixed(3);
-        kph.value = (valnum * 3.6).toFixed(1);
-        ips.value = (valnum * 39.3700787402).toFixed(10);
-        iph.value = (valnum * 141732.28346457).toFixed(8);
-        fps.value = (valnum * 3.280839895).toFixed(9);
-        fph.value = (valnum * 11811.023622047).toFixed(9);
-        mis.value = (valnum * 0.0006213712).toFixed(10);
-        mih.value = (valnum * 2.2369362921).toFixed(10);
-        kn.value = (valnum * 1.9438444924).toFixed(10);
+        mph.value = (valnum6 * 3600).toFixed();
+        kps.value = (valnum6 * 0.001).toFixed(3);
+        kph.value = (valnum6 * 3.6).toFixed(1);
+        ips.value = (valnum6 * 39.3700787402).toFixed(10);
+        iph.value = (valnum6 * 141732.28346457).toFixed(8);
+        fps.value = (valnum6 * 3.280839895).toFixed(9);
+        fph.value = (valnum6 * 11811.023622047).toFixed(9);
+        mis.value = (valnum6 * 0.0006213712).toFixed(10);
+        mih.value = (valnum6 * 2.2369362921).toFixed(10);
+        kn.value = (valnum6 * 1.9438444924).toFixed(10);
     }
     if (source == "mph") {
-        mps.value = (valnum * 0.0002777778).toFixed(10);
-        kps.value = (valnum * 0.00000027778).toFixed(11);
-        kph.value = (valnum * 0.001).toFixed(3);
-        ips.value = (valnum * 0.010936133).toFixed(9);
-        iph.value = (valnum * 39.3700787402).toFixed(10);
-        fps.value = (valnum * 0.0009113444).toFixed(10);
-        fph.value = (valnum * 3.280839895).toFixed(9);
-        mis.value = (valnum * 0.0000001726).toFixed(10);
-        mih.value = (valnum * 0.0006213712).toFixed(10);
-        kn.value = (valnum * 0.0005399568).toFixed(10);
+        mps.value = (valnum6 * 0.0002777778).toFixed(10);
+        kps.value = (valnum6 * 0.00000027778).toFixed(11);
+        kph.value = (valnum6 * 0.001).toFixed(3);
+        ips.value = (valnum6 * 0.010936133).toFixed(9);
+        iph.value = (valnum6 * 39.3700787402).toFixed(10);
+        fps.value = (valnum6 * 0.0009113444).toFixed(10);
+        fph.value = (valnum6 * 3.280839895).toFixed(9);
+        mis.value = (valnum6 * 0.0000001726).toFixed(10);
+        mih.value = (valnum6 * 0.0006213712).toFixed(10);
+        kn.value = (valnum6 * 0.0005399568).toFixed(10);
     }
     if (source == "kps") {
-        mps.value = (valnum * 1000).toFixed();
-        mph.value = (valnum * 3600000).toFixed();
-        kph.value = (valnum * 3600).toFixed();
-        ips.value = (valnum * 39370.078740158).toFixed(9);
-        iph.value = (valnum * 141732283.46457).toFixed(5);
-        fps.value = (valnum * 3280.8398950131).toFixed(10);
-        fph.value = (valnum * 11811023.622047).toFixed(6);
-        mis.value = (valnum * 0.6213711922).toFixed(10);
-        mih.value = (valnum * 2236.9362920544).toFixed(10);
-        kn.value = (valnum * 1943.8444924406).toFixed(10);
+        mps.value = (valnum6 * 1000).toFixed();
+        mph.value = (valnum6 * 3600000).toFixed();
+        kph.value = (valnum6 * 3600).toFixed();
+        ips.value = (valnum6 * 39370.078740158).toFixed(9);
+        iph.value = (valnum6 * 141732283.46457).toFixed(5);
+        fps.value = (valnum6 * 3280.8398950131).toFixed(10);
+        fph.value = (valnum6 * 11811023.622047).toFixed(6);
+        mis.value = (valnum6 * 0.6213711922).toFixed(10);
+        mih.value = (valnum6 * 2236.9362920544).toFixed(10);
+        kn.value = (valnum6 * 1943.8444924406).toFixed(10);
     }
     if (source == "kph") {
-        mps.value = (valnum * 0.2777777778).toFixed(10);
-        mph.value = (valnum * 1000).toFixed();
-        kps.value = (valnum * 0.0002777778).toFixed(10);
-        ips.value = (valnum * 10.9361329834).toFixed(10);
-        iph.value = (valnum * 39370.078740158).toFixed(9);
-        fps.value = (valnum * 0.9113444153).toFixed(10);
-        fph.value = (valnum * 3280.8398950131).toFixed(10);
-        mis.value = (valnum * 0.0001726031).toFixed(10);
-        mih.value = (valnum * 0.6213711922).toFixed(10);
-        kn.value = (valnum * 0.5399568035).toFixed(10);
+        mps.value = (valnum6 * 0.2777777778).toFixed(10);
+        mph.value = (valnum6 * 1000).toFixed();
+        kps.value = (valnum6 * 0.0002777778).toFixed(10);
+        ips.value = (valnum6 * 10.9361329834).toFixed(10);
+        iph.value = (valnum6 * 39370.078740158).toFixed(9);
+        fps.value = (valnum6 * 0.9113444153).toFixed(10);
+        fph.value = (valnum6 * 3280.8398950131).toFixed(10);
+        mis.value = (valnum6 * 0.0001726031).toFixed(10);
+        mih.value = (valnum6 * 0.6213711922).toFixed(10);
+        kn.value = (valnum6 * 0.5399568035).toFixed(10);
     }
     if (source == "ips") {
-        mps.value = (valnum * 0.0254).toFixed(4);
-        mph.value = (valnum * 91.44).toFixed(2);
-        kps.value = (valnum * 0.0000254).toFixed(7);
-        kph.value = (valnum * 0.09144).toFixed(5);
-        iph.value = (valnum * 3600).toFixed();
-        fps.value = (valnum * 0.0833333333).toFixed(10);
-        fph.value = (valnum * 300).toFixed();
-        mis.value = (valnum * 0.0000157828).toFixed(10);
-        mih.value = (valnum * 0.0568181818).toFixed(10);
-        kn.value = (valnum * 0.0493736501).toFixed(10);
+        mps.value = (valnum6 * 0.0254).toFixed(4);
+        mph.value = (valnum6 * 91.44).toFixed(2);
+        kps.value = (valnum6 * 0.0000254).toFixed(7);
+        kph.value = (valnum6 * 0.09144).toFixed(5);
+        iph.value = (valnum6 * 3600).toFixed();
+        fps.value = (valnum6 * 0.0833333333).toFixed(10);
+        fph.value = (valnum6 * 300).toFixed();
+        mis.value = (valnum6 * 0.0000157828).toFixed(10);
+        mih.value = (valnum6 * 0.0568181818).toFixed(10);
+        kn.value = (valnum6 * 0.0493736501).toFixed(10);
     }
     if (source == "iph") {
-        mps.value = (valnum * 0.0000070556).toFixed(10);
-        mph.value = (valnum * 0.0254).toFixed(4);
-        kps.value = (valnum * 0.0000000070556).toFixed(13);
-        kph.value = (valnum * 0.0000254).toFixed(7);
-        ips.value = (valnum * 0.0002777778).toFixed(10);
-        fps.value = (valnum * 0.0000231481).toFixed(10);
-        fph.value = (valnum * 0.0833333333).toFixed(10);
-        mis.value = (valnum * 0.0000000043841).toFixed(13);
-        mih.value = (valnum * 0.0000157828).toFixed(10);
-        kn.value = (valnum * 0.0000137149).toFixed(10);
+        mps.value = (valnum6 * 0.0000070556).toFixed(10);
+        mph.value = (valnum6 * 0.0254).toFixed(4);
+        kps.value = (valnum6 * 0.0000000070556).toFixed(13);
+        kph.value = (valnum6 * 0.0000254).toFixed(7);
+        ips.value = (valnum6 * 0.0002777778).toFixed(10);
+        fps.value = (valnum6 * 0.0000231481).toFixed(10);
+        fph.value = (valnum6 * 0.0833333333).toFixed(10);
+        mis.value = (valnum6 * 0.0000000043841).toFixed(13);
+        mih.value = (valnum6 * 0.0000157828).toFixed(10);
+        kn.value = (valnum6 * 0.0000137149).toFixed(10);
     }
     if (source == "fps") {
-        mps.value = (valnum * 0.3048).toFixed(4);
-        mph.value = (valnum * 1097.28).toFixed(2);
-        kps.value = (valnum * 0.0003048).toFixed(7);
-        kph.value = (valnum * 1.09728).toFixed(5);
-        ips.value = (valnum * 12).toFixed();
-        iph.value = (valnum * 43200).toFixed();
-        fph.value = (valnum * 3600).toFixed();
-        mis.value = (valnum * 0.0001893939).toFixed(10);
-        mih.value = (valnum * 0.6818181818).toFixed(10);
-        kn.value = (valnum * 0.5924838013).toFixed(10);
+        mps.value = (valnum6 * 0.3048).toFixed(4);
+        mph.value = (valnum6 * 1097.28).toFixed(2);
+        kps.value = (valnum6 * 0.0003048).toFixed(7);
+        kph.value = (valnum6 * 1.09728).toFixed(5);
+        ips.value = (valnum6 * 12).toFixed();
+        iph.value = (valnum6 * 43200).toFixed();
+        fph.value = (valnum6 * 3600).toFixed();
+        mis.value = (valnum6 * 0.0001893939).toFixed(10);
+        mih.value = (valnum6 * 0.6818181818).toFixed(10);
+        kn.value = (valnum6 * 0.5924838013).toFixed(10);
     }
     if (source == "fph") {
-        mps.value = (valnum * 0.0000846667).toFixed(10);
-        mph.value = (valnum * 0.3048).toFixed(4);
-        kps.value = (valnum * 0.000000084667).toFixed(12);
-        kph.value = (valnum * 0.0003048).toFixed(7);
-        ips.value = (valnum * 0.0033333333).toFixed(10);
-        iph.value = (valnum * 12).toFixed();
-        fps.value = (valnum * 0.0002777778).toFixed(10);
-        mis.value = (valnum * 0.000000052609).toFixed(12);
-        mih.value = (valnum * 0.0001893939).toFixed(10);
-        kn.value = (valnum * 0.0001645788).toFixed(10);
+        mps.value = (valnum6 * 0.0000846667).toFixed(10);
+        mph.value = (valnum6 * 0.3048).toFixed(4);
+        kps.value = (valnum6 * 0.000000084667).toFixed(12);
+        kph.value = (valnum6 * 0.0003048).toFixed(7);
+        ips.value = (valnum6 * 0.0033333333).toFixed(10);
+        iph.value = (valnum6 * 12).toFixed();
+        fps.value = (valnum6 * 0.0002777778).toFixed(10);
+        mis.value = (valnum6 * 0.000000052609).toFixed(12);
+        mih.value = (valnum6 * 0.0001893939).toFixed(10);
+        kn.value = (valnum6 * 0.0001645788).toFixed(10);
     }
     if (source == "mis") {
-        mps.value = (valnum * 1609.344).toFixed(3);
-        mph.value = (valnum * 5793638.4).toFixed(1);
-        kps.value = (valnum * 1.609344).toFixed(6);
-        kph.value = (valnum * 5793.6384).toFixed(4);
-        ips.value = (valnum * 63360).toFixed();
-        iph.value = (valnum * 228096000).toFixed();
-        fps.value = (valnum * 5280).toFixed();
-        fph.value = (valnum * 19008000).toFixed();
-        mih.value = (valnum * 3600).toFixed();
-        kn.value = (valnum * 3128.3144708423).toFixed(10);
+        mps.value = (valnum6 * 1609.344).toFixed(3);
+        mph.value = (valnum6 * 5793638.4).toFixed(1);
+        kps.value = (valnum6 * 1.609344).toFixed(6);
+        kph.value = (valnum6 * 5793.6384).toFixed(4);
+        ips.value = (valnum6 * 63360).toFixed();
+        iph.value = (valnum6 * 228096000).toFixed();
+        fps.value = (valnum6 * 5280).toFixed();
+        fph.value = (valnum6 * 19008000).toFixed();
+        mih.value = (valnum6 * 3600).toFixed();
+        kn.value = (valnum6 * 3128.3144708423).toFixed(10);
     }
     if (source == "mih") {
-        mps.value = (valnum * 0.44704).toFixed(5);
-        mph.value = (valnum * 1609.344).toFixed(3);
-        kps.value = (valnum * 0.00044704).toFixed(8);
-        kph.value = (valnum * 1.609344).toFixed(6);
-        ips.value = (valnum * 17.6).toFixed(1);
-        iph.value = (valnum * 63360).toFixed();
-        fps.value = (valnum * 1.4666666667).toFixed(10);
-        fph.value = (valnum * 5280).toFixed();
-        mis.value = (valnum * 0.0002777778).toFixed(10);
-        kn.value = (valnum * 0.8689762419).toFixed(10);
+        mps.value = (valnum6 * 0.44704).toFixed(5);
+        mph.value = (valnum6 * 1609.344).toFixed(3);
+        kps.value = (valnum6 * 0.00044704).toFixed(8);
+        kph.value = (valnum6 * 1.609344).toFixed(6);
+        ips.value = (valnum6 * 17.6).toFixed(1);
+        iph.value = (valnum6 * 63360).toFixed();
+        fps.value = (valnum6 * 1.4666666667).toFixed(10);
+        fph.value = (valnum6 * 5280).toFixed();
+        mis.value = (valnum6 * 0.0002777778).toFixed(10);
+        kn.value = (valnum6 * 0.8689762419).toFixed(10);
     }
     if (source == "kn") {
-        mps.value = (valnum * 0.5144444444).toFixed(10);
-        mph.value = (valnum * 1852).toFixed();
-        kps.value = (valnum * 0.0005144444).toFixed(10);
-        kph.value = (valnum * 1.852).toFixed(3);
-        ips.value = (valnum * 20.2537182852).toFixed(10);
-        iph.value = (valnum * 72913.385826772).toFixed(9);
-        fps.value = (valnum * 1.6878098571).toFixed(10);
-        fph.value = (valnum * 6076.1154855643).toFixed(10);
-        mis.value = (valnum * 0.000319661).toFixed(9);
-        mih.value = (valnum * 1.150779448).toFixed(9);
+        mps.value = (valnum6 * 0.5144444444).toFixed(10);
+        mph.value = (valnum6 * 1852).toFixed();
+        kps.value = (valnum6 * 0.0005144444).toFixed(10);
+        kph.value = (valnum6 * 1.852).toFixed(3);
+        ips.value = (valnum6 * 20.2537182852).toFixed(10);
+        iph.value = (valnum6 * 72913.385826772).toFixed(9);
+        fps.value = (valnum6 * 1.6878098571).toFixed(10);
+        fph.value = (valnum6 * 6076.1154855643).toFixed(10);
+        mis.value = (valnum6 * 0.000319661).toFixed(9);
+        mih.value = (valnum6 * 1.150779448).toFixed(9);
     }
 }
 
@@ -567,45 +567,45 @@ function TimeConv(source, valnum7) {
     var d = document.getElementById("d");
     var wk = document.getElementById("wk");
     if (source == "mls") {
-        sec.value = (valnum * 0.001).toFixed(3);
-        min.value = (valnum * 0.0000166667).toFixed(10);
-        h.value = (valnum * 0.00000027778).toFixed(11);
-        d.value = (valnum * 0.000000011574).toFixed(12);
-        wk.value = (valnum * 0.0000000016534).toFixed();
+        sec.value = (valnum7 * 0.001).toFixed(3);
+        min.value = (valnum7 * 0.0000166667).toFixed(10);
+        h.value = (valnum7 * 0.00000027778).toFixed(11);
+        d.value = (valnum7 * 0.000000011574).toFixed(12);
+        wk.value = (valnum7 * 0.0000000016534).toFixed();
     }
     if (source == "sec") {
-        mls.value = (valnum * 1000).toFixed();
-        min.value = (valnum * 0.0166666667).toFixed(10);
-        h.value = (valnum * 0.0002777778).toFixed(10);
-        d.value = (valnum * 0.0000115741).toFixed(10);
-        wk.value = (valnum * 0.0000016534).toFixed(10);
+        mls.value = (valnum7 * 1000).toFixed();
+        min.value = (valnum7 * 0.0166666667).toFixed(10);
+        h.value = (valnum7 * 0.0002777778).toFixed(10);
+        d.value = (valnum7 * 0.0000115741).toFixed(10);
+        wk.value = (valnum7 * 0.0000016534).toFixed(10);
     }
     if (source == "min") {
-        mls.value = (valnum * 60000).toFixed();
-        sec.value = (valnum * 60).toFixed();
-        h.value = (valnum * 0.0166666667).toFixed(10);
-        d.value = (valnum * 0.0006944444).toFixed(10);
-        wk.value = (valnum * 0.0000992063).toFixed(10);
+        mls.value = (valnum7 * 60000).toFixed();
+        sec.value = (valnum7 * 60).toFixed();
+        h.value = (valnum7 * 0.0166666667).toFixed(10);
+        d.value = (valnum7 * 0.0006944444).toFixed(10);
+        wk.value = (valnum7 * 0.0000992063).toFixed(10);
     }
     if (source == "h") {
-        mls.value = (valnum * 3600000).toFixed();
-        sec.value = (valnum * 3600).toFixed();
-        min.value = (valnum * 60).toFixed();
-        d.value = (valnum * 0.0416666667).toFixed(10);
-        wk.value = (valnum * 0.005952381).toFixed(9);
+        mls.value = (valnum7 * 3600000).toFixed();
+        sec.value = (valnum7 * 3600).toFixed();
+        min.value = (valnum7 * 60).toFixed();
+        d.value = (valnum7 * 0.0416666667).toFixed(10);
+        wk.value = (valnum7 * 0.005952381).toFixed(9);
     }
     if (source == "d") {
-        mls.value = (valnum * 86400000).toFixed();
-        sec.value = (valnum * 86400).toFixed();
-        min.value = (valnum * 1440).toFixed();
-        h.value = (valnum * 24).toFixed();
-        wk.value = (valnum * 0.1428571429).toFixed(10);
+        mls.value = (valnum7 * 86400000).toFixed();
+        sec.value = (valnum7 * 86400).toFixed();
+        min.value = (valnum7 * 1440).toFixed();
+        h.value = (valnum7 * 24).toFixed();
+        wk.value = (valnum7 * 0.1428571429).toFixed(10);
     }
     if (source == "wk") {
-        mls.value = (valnum * 604800000).toFixed();
-        sec.value = (valnum * 604800).toFixed();
-        min.value = (valnum * 10080).toFixed();
-        h.value = (valnum * 168).toFixed();
-        d.value = (valnum * 7).toFixed();
+        mls.value = (valnum7 * 604800000).toFixed();
+        sec.value = (valnum7 * 604800).toFixed();
+        min.value = (valnum7 * 10080).toFixed();
+        h.value = (valnum7 * 168).toFixed();
+        d.value = (valnum7 * 7).toFixed();
     }
 }
