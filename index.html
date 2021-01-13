@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=yes">
   <title>One UI Calculator</title>
   <link rel="stylesheet" href="OneUI/oui.min.css">
   <link rel="stylesheet" href="materialize.css">
@@ -39,39 +40,71 @@
       color: white;
     }
   </style>
-</head>
 <script type="text/javascript" src="Calculator.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="materialize.js"></script>
+<script>
+  $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
 
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+              }, 800, function () {
+
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+              });
+          } // End if
+      });
+  });
+  $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+$('.fixed-action-btn').closeFAB();
+$('.fixed-action-btn.toolbar').openToolbar();
+$('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({delay: 50});
+  })
+  </script>
+</head>
 <body>
   <main class="container">
     <div class="oui-interaction center-align">
       <!-- Interaction area -->
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large green" href="convert.html">
-          <i class="large material-icons">straighten</i>
+      <div class="fixed-action-btn click-to-toggle">
+        <a class="btn-floating btn-large green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Menu">
+          <i class="large material-icons">more_vert</i>
         </a>
+        <ul>
+          <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="About" href="about.html"><i class="material-icons white-text">info</i></a></li>
+          <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Dark/Light" href="index-dark.html"><i class="material-icons white-text">toggle_off</i></a></li>
+          <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Converter" href="convert.html"><i class="material-icons white-text">straighten</i></a></li>
+        </ul>
       </div>
       <div class="oui-bubble" id="page">
-        <div class="right-align"><a class="black-text" href="index-dark.html">&#9728;<i
+        <!--div class="right-align"><a class="black-text" href="index-dark.html">&#9728;<i
               class="medium material-icons">toggle_off</i>&#9790;</a>
-        </div>
+        </div-->
         <form name="calc">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
           <a href="index.html#page" onclick="f1()" class="input" style="right:22px; position: absolute;"><i
               class="material-icons">backspace</i>
           </a>
           <a href="index.html#page" onclick="document.calc.ans.value+=')'" class="input"
             style="left:22px; position: absolute; font-size: x-large;"><b>)</b>
-            <!--i class="material-icons">brightness_3</i-->
           </a>
           <br>
           <input type="text" name="ans" id="number_input" readonly
-            style="font-size: x-large; border-top: none; border-left: none; border-right: none; border-bottom-width: 1px;">
+            style="font-size: xx-large; border-top: none; border-left: none; border-right: none; border-bottom-width: 1px;">
           <div style="padding: 4px; font-size: 20px;" class="center-align">
             <button type="button" onclick="document.calc.ans.value=''" class="btn grey lighten-4 btn-large clear"
               style="font-size: larger;">C</button>
@@ -122,7 +155,6 @@
             <button type="button" onclick="document.calc.ans.value = eval(document.calc.ans.value)"
               class="btn green btn-large equal" style="font-size: larger;">=</button>
             <br>
-            <br>
             <hr style="border: dashed 0.5px black;">
             <button type="button" onclick="f9()" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">&#8543;</button>
@@ -146,8 +178,9 @@
         </form>
       </div>
       <h5>One UI Calculator</h5>
-      <h6>2020.2.2</h6>
+      <h6>2021.2.3 beta</h6>
     </div>
+    <br>
   </main>
 </body>
 
