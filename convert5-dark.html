@@ -19,22 +19,33 @@
       font-size: larger;
     }
   </style>
-</head>
-<script type="text/javascript" src="Calculator.js"></script>
 <script type="text/javascript" src="convert.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize.js"></script>
+<script>
+  $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+$('.fixed-action-btn').closeFAB();
+$('.fixed-action-btn.toolbar').openToolbar();
+$('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({delay: 50});
+  })
+</script>
+</head>
 <body class="black white-text">
   <main class="container">
     <div class="oui-interaction center-align black white-text">
       <!-- Interaction area -->
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large green" href="index.html">
-          <i class="large material-icons">calculate</i>
-        </a>
-      </div>
       <div class="oui-bubble black white-text">
-        <div class="right-align"><a class="white-text" href="convert5.html"><i
-              class="medium material-icons">toggle_on</i></a>
+        <div class="fixed-action-btn click-to-toggle">
+          <a class="btn-floating btn-large green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Menu">
+            <i class="large material-icons">more_vert</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="About" href="about.html"><i class="material-icons">info</i></a></li>
+            <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Dark/Light" href="convert5.html"><i class="material-icons">toggle_on</i></a></li>
+            <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Calculator" href="index-dark.html"><i class="material-icons">calculate</i></a></li>
+          </ul>
         </div>
         <ul class="pagination">
           <li><a href="convert-dark.html" style="color: white;">Area</a></li>
@@ -300,7 +311,7 @@
         </form>
       </div>
       <h5>One UI Calculator</h5>
-      <h6>2020.2.2</h6>
+      <h6>2021.2.3</h6>
     </div>
     <br>
   </main>

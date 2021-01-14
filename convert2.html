@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <title>Unit Convertor - One UI Calculator</title>
+  <title>Convertor (Temperature) - One UI Calculator</title>
   <link rel="stylesheet" href="OneUI/oui.min.css">
   <link rel="stylesheet" href="materialize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,22 +19,33 @@
       font-size: larger;
     }
   </style>
-</head>
-<script type="text/javascript" src="Calculator.js"></script>
 <script type="text/javascript" src="convert.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize.js"></script>
+<script>
+  $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+$('.fixed-action-btn').closeFAB();
+$('.fixed-action-btn.toolbar').openToolbar();
+$('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({delay: 50});
+  })
+</script>
+</head>
 <body>
   <main class="container">
     <div class="oui-interaction center-align">
       <!-- Interaction area -->
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large green" href="index.html">
-          <i class="large material-icons">calculate</i>
-        </a>
-      </div>
       <div class="oui-bubble">
-        <div class="right-align"><a class="black-text" href="convert2-dark.html"><i
-              class="medium material-icons">toggle_off</i></a>
+        <div class="fixed-action-btn click-to-toggle">
+          <a class="btn-floating btn-large green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Menu">
+            <i class="large material-icons">more_vert</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="About" href="about.html"><i class="material-icons white-text">info</i></a></li>
+            <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Dark/Light" href="convert2-dark.html"><i class="material-icons white-text">toggle_off</i></a></li>
+            <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Calculator" href="index.html"><i class="material-icons white-text">calculate</i></a></li>
+          </ul>
         </div>
         <ul class="pagination">
           <li><a href="convert.html">Area</a></li>
@@ -300,7 +311,7 @@
         </form>
       </div>
       <h5>One UI Calculator</h5>
-      <h6>2020.2.2</h6>
+      <h6>2021.2.3</h6>
     </div>
   </main>
 </body>
