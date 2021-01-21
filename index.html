@@ -41,7 +41,7 @@
     }
   </style>
 <script type="text/javascript" src="Calculator.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="materialize.js"></script>
 <script>
   $(document).ready(function () {
@@ -86,7 +86,7 @@ $('.fixed-action-btn.toolbar').closeToolbar();
           <i class="large material-icons">more_vert</i>
         </a>
         <ul>
-          <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="About" href="about.html"><i class="material-icons">info</i></a></li>
+          <li><a class="btn-floating green btn tooltipped" data-position="top" data-delay="50" data-tooltip="About" href="about.html"><i class="material-icons">info</i></a></li>
           <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Dark/Light" href="index-dark.html"><i class="material-icons">toggle_off</i></a></li>
           <li><a class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Converter" href="convert.html"><i class="material-icons">straighten</i></a></li>
         </ul>
@@ -117,20 +117,20 @@ $('.fixed-action-btn.toolbar').closeToolbar();
               class="material-icons">backspace</i>
           </a>
           <a href="index.html#page" onclick="document.calc.ans.value+=')'" class="input"
-            style="left:22px; position: absolute; font-size: x-large;"><b>)</b>
+            style="left:22px; position: absolute; font-size: x-large;"><b></b>
           </a>
           <br>
           <br>
           <hr>
           <div style="padding: 4px; font-size: 20px;" class="center-align">
-            <button type="button" onclick="document.calc.ans.value=''" class="btn grey lighten-4 btn-large clear"
-              style="font-size: larger;">C</button>
-            <button type="button" onclick="document.calc.ans.value+='*('" class="btn grey lighten-4 btn-large operate"
-              style="font-size: larger;">(</button>
-            <button type="button" onclick="document.calc.ans.value+='%'" class="btn grey lighten-4 btn-large operate"
-              style="font-size: larger;">%</button>
-            <button type="button" onclick="document.calc.ans.value+='/'" class="btn grey lighten-4 btn-large operate"
-              style="font-size: larger;">&divide;</button>
+            <button type="button" onclick="document.calc.ans.value=''" class="btn grey lighten-4 btn-large clear tooltipped"
+              style="font-size: larger;" data-position="left" data-delay="50" data-tooltip="Clear">C</button>
+            <button type="button" onclick="f10()" class="btn grey lighten-4 btn-large operate tooltipped"
+              style="font-size: larger;" data-position="top" data-delay="50" data-tooltip="Brackets">()</button>
+            <button type="button" onclick="document.calc.ans.value+='%'" class="btn grey lighten-4 btn-large operate tooltipped"
+              style="font-size: larger;" data-position="top" data-delay="50" data-tooltip="Percentage">%</button>
+            <button type="button" onclick="document.calc.ans.value+='/'" class="btn grey lighten-4 btn-large operate tooltipped"
+              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Division">&divide;</button>
             <br>
             <br>
             <button type="button" onclick="document.calc.ans.value+='7'" class="btn grey lighten-4 btn-large input"
@@ -139,8 +139,8 @@ $('.fixed-action-btn.toolbar').closeToolbar();
               style="font-size: larger;">8</button>
             <button type="button" onclick="document.calc.ans.value+='9'" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">9</button>
-            <button type="button" onclick="document.calc.ans.value+='*'" class="btn grey lighten-4 btn-large operate"
-              style="font-size: larger;">X</button>
+            <button type="button" onclick="document.calc.ans.value+='*'" class="btn grey lighten-4 btn-large operate tooltipped"
+              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Multiplication">X</button>
             <br>
             <br>
             <button type="button" onclick="document.calc.ans.value+='4'" class="btn grey lighten-4 btn-large input"
@@ -149,8 +149,8 @@ $('.fixed-action-btn.toolbar').closeToolbar();
               style="font-size: larger;">5</button>
             <button type="button" onclick="document.calc.ans.value+='6'" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">6</button>
-            <button type="button" onclick="document.calc.ans.value+='-'" class="btn grey lighten-4 btn-large operate"
-              style="font-size: larger;">-</button>
+            <button type="button" onclick="document.calc.ans.value+='-'" class="btn grey lighten-4 btn-large operate tooltipped"
+              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Minus">-</button>
             <br>
             <br>
             <button type="button" onclick="document.calc.ans.value+='1'" class="btn grey lighten-4 btn-large input"
@@ -159,8 +159,8 @@ $('.fixed-action-btn.toolbar').closeToolbar();
               style="font-size: larger;">2</button>
             <button type="button" onclick="document.calc.ans.value+='3'" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">3</button>
-            <button type="button" onclick="document.calc.ans.value+='+'" class="btn grey lighten-4 btn-large operate"
-              style="font-size: larger;">+</button>
+            <button type="button" onclick="document.calc.ans.value+='+'" class="btn grey lighten-4 btn-large operate tooltipped"
+              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Plus">+</button>
             <br>
             <br>
             <button type="button" onclick="f3()" class="btn grey lighten-4 btn-large input"
@@ -170,32 +170,32 @@ $('.fixed-action-btn.toolbar').closeToolbar();
             <button type="button" onclick="document.calc.ans.value+='.'" class="btn grey lighten-4 btn-large input"
               style="font-size: larger;">.</button>
             <button type="button" onclick="document.calc.ans.value = eval(document.calc.ans.value)"
-              class="btn green btn-large equal" style="font-size: larger;">=</button>
+              class="btn green btn-large equal tooltipped" style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Equal">=</button>
             <br>
             <hr style="border: dashed 0.5px black;">
-            <button type="button" onclick="f9()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">&#8543;</button>
-            <button type="button" onclick="document.calc.ans.value+='**'" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">&#8743;</button>
-            <button type="button" onclick="f6()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">&#8508;</button>
-            <button type="button" onclick="f4()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">!</button>
+            <button type="button" onclick="f9()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="left" data-delay="50" data-tooltip="Inverse">&#8543;</button>
+            <button type="button" onclick="document.calc.ans.value+='**'" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Exponent">&#8743;</button>
+            <button type="button" onclick="f6()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Pi">&#8508;</button>
+            <button type="button" onclick="f4()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Factorial">!</button>
             <br>
             <br>
-            <button type="button" onclick="f5()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">²</button>
-            <button type="button" onclick="f8()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">³</button>
-            <button type="button" onclick="f2()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">&#8730;</button>
-            <button type="button" onclick="f7()" class="btn grey lighten-4 btn-large input"
-              style="font-size: larger;">&#8731;</button>
+            <button type="button" onclick="f5()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="left" data-delay="50" data-tooltip="Square">²</button>
+            <button type="button" onclick="f8()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Cube">³</button>
+            <button type="button" onclick="f2()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Square root">&#8730;</button>
+            <button type="button" onclick="f7()" class="btn grey lighten-4 btn-large input tooltipped"
+              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Cube root">&#8731;</button>
           </div>
         </form>
       </div>
       <h5>One UI Calculator</h5>
-      <h6>2021.2.3</h6>
+      <h6>2021.2.4</h6>
     </div>
     <br>
   </main>

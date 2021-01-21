@@ -1,41 +1,4 @@
-function notifyMe() {
-        // Let's check if the browser supports notifications
-        //if (!("Notification" in window)) {
-            //alert("This browser does not support desktop notification");
-        }
-
-        // Let's check whether notification permissions have already been granted
-        //else if (Notification.permission === "granted") {
-            // If it's okay let's create a notification
-            //var notification = new Notification("v1.2 by Gaurav K (UI optimised for mobile view)");
-        //}
-
-        // Otherwise, we need to ask the user for permission
-        //else if (Notification.permission !== 'denied') {
-            //Notification.requestPermission(function (permission) {
-                // If the user accepts, let's create a notification
-                //if (permission === "granted") {
-            //var notification = new Notification("v1.2 by Gaurav K (UI optimised for Mobile view)");
-                //}
-            //});
-        //}
-
-        // At last, if the user has denied notifications, and you 
-        // want to be respectful there is no need to bother them any more.
-    //}
-    //Notification.requestPermission().then(function (result) {
-        console.log(result);
-    //});
-
-    function spawnNotification(theBody, theIcon, theTitle) {
-        var options = {
-            body: theBody,
-            icon: theIcon
-        }
-        var n = new Notification(theTitle, options);
-    }
-
-    function f1() {
+function f1() {
         var num = document.getElementById('number_input');
         num.value = num.value.slice(0, -1);
     }
@@ -82,4 +45,9 @@ function notifyMe() {
     function f9() {
         var num7 = document.getElementById('number_input');
         num7.value = '1/' + '(' + num7.value + ')';
+    }
+
+    function f10() {
+        var num8 = document.getElementById('number_input');
+        num8.value = '(' + num8.value + ')' + '*';
     }
