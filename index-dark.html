@@ -20,44 +20,29 @@
       font-size: larger;
     }
 
-    .input {
-      border-radius: 25px;
-      color: black;
-      font-family: 'SamsungOne 400';
-    }
-
-    .input:hover {
+    .input, .input:hover {
       color: black;
     }
 
-    .clear {
-      border-radius: 25px;
-      color: orangered;
-      font-family: 'SamsungOne 400';
-    }
-
-    .clear:hover {
+    .clear, .clear:hover {
       color: orangered;
     }
 
-    .operate {
-      border-radius: 25px;
-      color: lightgreen;
-      font-family: 'SamsungOne 400';
-    }
-
-    .operate:hover {
+    .operate, .operate:hover {
       color: lightgreen;
     }
 
-    .equal {
-      border-radius: 25px;
+    .equal, .equal:hover {
       color: white;
-      font-family: 'SamsungOne 400';
     }
 
-    .equal:hover {
-      color: white;
+    .oui-button {
+      border-radius: 70px 70px 70px 70px;
+      width: 62px;
+      height: 55px;
+      padding: 1px;
+      box-shadow: none;
+      font-family: 'SamsungOne 400';
     }
   </style>
 <script type="text/javascript" src="Calculator.js"></script>
@@ -140,74 +125,90 @@ $('.fixed-action-btn.toolbar').closeToolbar();
           <br>
           <hr>
           <div style="padding: 4px; font-size: 20px;" class="center-align">
-            <button type="button" onclick="document.calc.ans.value=''" class="btn grey darken-3 btn-large clear tooltipped"
-              style="font-size: larger;" data-position="left" data-delay="50" data-tooltip="Clear All">C</button>
-            <button type="button" onclick="f10()" class="btn grey darken-3 btn-large operate tooltipped"
-              style="font-size: larger;" data-position="top" data-delay="50" data-tooltip="Brackets">()</button>
-            <button type="button" onclick="document.calc.ans.value+='%'" class="btn grey darken-3 btn-large operate tooltipped"
-              style="font-size: larger;" data-position="top" data-delay="50" data-tooltip="Percentage">%</button>
-            <button type="button" onclick="document.calc.ans.value+='/'" class="btn grey darken-3 btn-large operate tooltipped"
-              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Division">÷</button>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 clear btn-large grey darken-3 tooltipped" data-position="left"
+              data-delay="50" data-tooltip="Clear" style="font-size: larger;" onclick="document.calc.ans.value=''">C
+            </div>
+            <div class="oui-button col s1 m1 operate btn-large grey darken-3 tooltipped" data-position="top"
+              data-delay="50" data-tooltip="Brackets" style="font-size: larger;" onclick="f10()">&lpar;&rpar;</div>
+            <div class="oui-button col s1 m1 operate btn-large grey darken-3 tooltipped" data-position="top"
+              data-delay="50" data-tooltip="Percentage" style="font-size: larger;"
+              onclick="document.calc.ans.value+='%'">&percnt;</div>
+            <div class="oui-button col s1 m1 operate btn-large grey darken-3 tooltipped" data-position="right"
+              data-delay="50" data-tooltip="Division" style="font-size: larger;" onclick="document.calc.ans.value+='/'">
+              &divide;</div>
+            <div class="col s4 m4"></div>
             <br>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='7'">7</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='8'">8</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='9'">9</div>
+            <div class="oui-button col s1 m1 operate btn-large grey darken-3 tooltipped" data-position="right"
+              data-delay="50" data-tooltip="Multiplication" style="font-size: larger;"
+              onclick="document.calc.ans.value+='*'">&times;</div>
+            <div class="col s4 m4"></div>
             <br>
-            <button type="button" onclick="document.calc.ans.value+='7'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">7</button>
-            <button type="button" onclick="document.calc.ans.value+='8'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">8</button>
-            <button type="button" onclick="document.calc.ans.value+='9'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">9</button>
-            <button type="button" onclick="document.calc.ans.value+='*'" class="btn grey darken-3 btn-large operate tooltipped"
-              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Multiplication">X</button>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='4'">4</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='5'">5</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='6'">6</div>
+            <div class="oui-button col s1 m1 operate btn-large grey darken-3 tooltipped" data-position="right"
+              data-delay="50" data-tooltip="Minus" style="font-size: larger;" onclick="document.calc.ans.value+='-'">&minus;
+            </div>
+            <div class="col s4 m4"></div>
             <br>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='1'">1</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='2'">2</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='3'">3</div>
+            <div class="oui-button col s1 m1 operate btn-large grey darken-3 tooltipped" data-position="right"
+              data-delay="50" data-tooltip="Plus" style="font-size: larger;" onclick="document.calc.ans.value+='+'">&plus;
+            </div>
+            <div class="col s4 m4"></div>
             <br>
-            <button type="button" onclick="document.calc.ans.value+='4'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">4</button>
-            <button type="button" onclick="document.calc.ans.value+='5'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">5</button>
-            <button type="button" onclick="document.calc.ans.value+='6'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">6</button>
-            <button type="button" onclick="document.calc.ans.value+='-'" class="btn grey darken-3 btn-large operate tooltipped"
-              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Minus">-</button>
-            <br>
-            <br>
-            <button type="button" onclick="document.calc.ans.value+='1'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">1</button>
-            <button type="button" onclick="document.calc.ans.value+='2'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">2</button>
-            <button type="button" onclick="document.calc.ans.value+='3'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">3</button>
-            <button type="button" onclick="document.calc.ans.value+='+'" class="btn grey darken-3 btn-large operate tooltipped"
-              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Plus">+</button>
-            <br>
-            <br>
-            <button type="button" onclick="f3()" class="btn grey darken-3 white-text btn-large input"
-              style="font-size: larger;">&#177;</button>
-            <button type="button" onclick="document.calc.ans.value+='0'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">0</button>
-            <button type="button" onclick="document.calc.ans.value+='.'"
-              class="btn grey darken-3 white-text btn-large input" style="font-size: larger;">.</button>
-            <button type="button" onclick="document.calc.ans.value = eval(document.calc.ans.value)"
-              class="btn green btn-large equal tooltipped" style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Equal">=</button>
-            <br>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;" onclick="f3()">
+              &#177;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='0'">0</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text" style="font-size: larger;"
+              onclick="document.calc.ans.value+='.'">.</div>
+            <div class="oui-button col s1 m1 equal btn-large green tooltipped" data-position="right" data-delay="50"
+              data-tooltip="Equal" style="font-size: larger;"
+              onclick="document.calc.ans.value = eval(document.calc.ans.value)">&equals;</div>
+            <div class="col s4 m4"></div>
             <hr style="border: dashed 0.5px white;">
-            <button type="button" onclick="f9()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="left" data-delay="50" data-tooltip="Inverse">&#8543;</button>
-            <button type="button" onclick="document.calc.ans.value+='**'"
-              class="btn grey darken-3 white-text btn-large input tooltipped" style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Exponent">&#8743;</button>
-            <button type="button" onclick="f6()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Pi">&#8508;</button>
-            <button type="button" onclick="f4()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Factorial">!</button>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="left"
+              data-delay="50" data-tooltip="Inverse" style="font-size: larger;" onclick="f9()">&#8543;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="bottom"
+              data-delay="50" data-tooltip="Exponent" style="font-size: larger;"
+              onclick="document.calc.ans.value+='**'">&#94;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="bottom"
+              data-delay="50" data-tooltip="Pi" style="font-size: larger;" onclick="f6()">&#8508;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="right"
+              data-delay="50" data-tooltip="Factorial" style="font-size: larger;" onclick="f4()">!</div>
+            <div class="col s4 m4"></div>
             <br>
-            <br>
-            <button type="button" onclick="f5()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="left" data-delay="50" data-tooltip="Square">²</button>
-            <button type="button" onclick="f8()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Cube">³</button>
-            <button type="button" onclick="f2()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="bottom" data-delay="50" data-tooltip="Square root">&#8730;</button>
-            <button type="button" onclick="f7()" class="btn grey darken-3 white-text btn-large input tooltipped"
-              style="font-size: larger;" data-position="right" data-delay="50" data-tooltip="Cube root">&#8731;</button>
+            <div class="col s4 m4"></div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="left"
+              data-delay="50" data-tooltip="Square" style="font-size: larger;" onclick="f5()">&sup2;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="bottom"
+              data-delay="50" data-tooltip="Cube" style="font-size: larger;" onclick="f8()">&sup3;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="bottom"
+              data-delay="50" data-tooltip="Square root" style="font-size: larger;" onclick="f2()">&#8730;</div>
+            <div class="oui-button col s1 m1 input btn-large grey darken-3 white-text tooltipped" data-position="right"
+              data-delay="50" data-tooltip="Cube root" style="font-size: larger;" onclick="f7()">&#8731;</div>
+            <div class="col s4 m4"></div>
           </div>
         </form>
       </div>
