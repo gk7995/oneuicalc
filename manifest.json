@@ -1,0 +1,16 @@
+{
+    "name": "OneUICalc",
+    "short_name": "OUICalc",
+    "start_url": "https://gk7995.github.io/oneuicalc/",
+    "display": "standalone",
+    "background_color": "#008000",
+    "description": "One UI Calculator",
+    "theme_color": "#008000",
+    "icons": [
+      {
+        "src": "picture1.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
