@@ -1,0 +1,466 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <title>Convertor - One UI Calculator</title>
+  <link rel="stylesheet" href="OneUI/oui.min.css">
+  <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="images/OUC.ico">
+  <style>
+    @font-face {
+      font-family: 'SamsungOne 400';
+      src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
+    }
+
+    * {
+      font-family: 'SamsungOne 400';
+      font-size: larger;
+    }
+  </style>
+  <script type="text/javascript" src="convert.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="materialize.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+      $('.fixed-action-btn').closeFAB();
+      $('.fixed-action-btn.toolbar').openToolbar();
+      $('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({
+        delay: 50
+      });
+    })
+    $(document).ready(function () {
+      $('.modal').modal();
+      $('#modal').modal();
+    })
+  </script>
+</head>
+
+<body oncontextmenu="return false;">
+  <main class="containr">
+    <div class="oui-interaction center-align">
+      <!-- Interaction area -->
+      <div class="oui-bubble">
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large green btn tooltipped pulse z-depth-5 modal-trigger" data-position="left"
+            data-delay="50" data-tooltip="Menu" href="#modal">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+        <!--Menu-->
+        <div id="modal" class="modal bottom-sheet right-align">
+          <div class="modal-content">
+            <ul class="collection left-align" style="border-width: 0px;">
+              <ul class="collection left-align" style="border-width: 0px;">
+                <li class="collection-item avatar grey lighten-2 oui-bubble z-depth-1"
+                  onclick="location.href='index.html'">
+                  <a href="#!"><i class="fas fa-calculator circle green"></i></a>
+                  <p style="font-size: x-large;">Calculator</p>
+                  <p>Back to Home</p>
+                </li>
+                <ul class="collection left-align" style="border-width: 0px;">
+                  <li class="collection-item avatar grey lighten-2 oui-bubble z-depth-1"
+                    onclick="location.href='about.html'">
+                    <a href="#!"><i class="fas fa-info circle green"></i></a>
+                    <p style="font-size: x-large;">About</p>
+                    <p>About this Website</p>
+                  </li>
+                  <li class="collection-item transparent"></li>
+                </ul>
+          </div>
+        </div>
+        <div class="col s12">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#area" class="active black-text">
+                <h6>AREA</h6>
+              </a></li>
+            <li class="tab"><a href="#leng" class="black-text">
+                <h6>LENGTH</h6>
+              </a></li>
+            <li class="tab"><a href="#temp" class="black-text">
+                <h6>TEMPERATURE</h6>
+              </a></li>
+            <li class="tab"><a href="#volu" class="black-text">
+                <h6>VOLUME</h6>
+              </a></li>
+            <li class="tab"><a href="#mass" class="black-text">
+                <h6>MASS</h6>
+              </a></li>
+            <li class="tab"><a href="#data" class="black-text">
+                <h6>DATA</h6>
+              </a></li>
+            <li class="tab"><a href="#spee" class="black-text">
+                <h6>SPEED</h6>
+              </a></li>
+            <li class="tab"><a href="#time" class="black-text">
+                <h6>TIME</h6>
+              </a></li>
+            <li class="tab"><a href="#curr" class="black-text">
+                <h6>CURRENCY</h6>
+              </a></li>
+            <div class="indicator green"></div>
+          </ul>
+        </div>
+        <div class="col s12" id="area"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="acre" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="acre">Acres (ac)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="ares" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="ares">Ares (a)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="hect" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="hect">Hectares (ha)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="sqcm" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="sqcm">Square centimeters (cm<sup>2</sup>)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="sqft" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="sqft">Square feet (ft<sup>2</sup>)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="sqin" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="sqin">Square inches (in<sup>2</sup>)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="sqms" placeholder="" type="number" oninput="AreaConv(this.id,this.value)"
+                  onchange="AreaConv(this.id,this.value)"> <label for="sqms">Square meters (m<sup>2</sup>)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="leng"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="mt" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="mt">Millimeters (mm)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="cm" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="cm">Centimeters (cm)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="ms" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="ms">Meters (m)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="km" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="km">Kilometers (km)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="ih" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="ih">Inches (in)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="ft" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="ft">Feet (ft)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="yd" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="yd">Yards (yd)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="mi" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="mi">Miles (mi)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="NM" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="NM">Nautical Miles (NM)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="mil" placeholder="" type="number" oninput="LengConv(this.id,this.value)"
+                  onchange="LengConv(this.id,this.value)"> <label for="mil">Mils (mil)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="temp"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="degc" placeholder="" type="number" oninput="TempConv(this.id,this.value)"
+                  onchange="TempConv(this.id,this.value)"> <label for="degc">Celsius (<sup>o</sup>C)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="degf" placeholder="" type="number" oninput="TempConv(this.id,this.value)"
+                  onchange="TempConv(this.id,this.value)"> <label for="degf">Fahrenheit (<sup>o</sup>F)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="kel" placeholder="" type="number" oninput="TempConv(this.id,this.value)"
+                  onchange="TempConv(this.id,this.value)"> <label for="kel">Kelvin (K)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="volu"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="gal" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="gal">UK gallons (gal)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="GAL" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="GAL">US gallons (gal)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="l" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="l">Liters (l)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="ml" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="ml">Milliliters (ml)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="cucm" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="cucm">Cubic Centimeters (cm<sup>3</sup>)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="cums" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="cums">Cubic Meters (m<sup>3</sup>)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="cuih" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="cuih">Cubic Inches (in<sup>3</sup>)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="cuft" placeholder="" type="number" oninput="VoluConv(this.id,this.value)"
+                  onchange="VoluConv(this.id,this.value)"> <label for="cuft">Cubic Feet (ft<sup>3</sup>)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="mass"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="t" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="t">Tons (t)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="ukt" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="ukt">UK Tons (t)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="ust" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="ust">US Tons (t)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="lb" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="lb">Pounds (lb)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="oz" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="oz">Ounces (oz)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="kg" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="kg">Kilograms (kg)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="g" placeholder="" type="number" oninput="MassConv(this.id,this.value)"
+                  onchange="MassConv(this.id,this.value)"> <label for="g">Grams (g)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="data"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="bit" placeholder="" type="number" oninput="DataConv(this.id,this.value)"
+                  onchange="DataConv(this.id,this.value)"> <label for="bit">Bits (bit)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="b" placeholder="" type="number" oninput="DataConv(this.id,this.value)"
+                  onchange="DataConv(this.id,this.value)"> <label for="b">Bytes (B)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="kb" placeholder="" type="number" oninput="DataConv(this.id,this.value)"
+                  onchange="DataConv(this.id,this.value)"> <label for="kb">Kilobytes (KB)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="mb" placeholder="" type="number" oninput="DataConv(this.id,this.value)"
+                  onchange="DataConv(this.id,this.value)"> <label for="mb">Megabytes (MB)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="gb" placeholder="" type="number" oninput="DataConv(this.id,this.value)"
+                  onchange="DataConv(this.id,this.value)"> <label for="gb">Gigabytes (GB)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="tb" placeholder="" type="number" oninput="DataConv(this.id,this.value)"
+                  onchange="DataConv(this.id,this.value)"> <label for="tb">Terabytes (TB)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="spee"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="mps" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="mps">Meters per second (m/s)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="mph" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="mph">Meters per hour (m/h)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="kps" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="kps">Kilometers per second (km/s)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="kph" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="kph">Kilometers per hour (km/h)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="ips" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="ips">Inches per second (in/s)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="iph" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="iph">Inches per hour (in/h)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="fps" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="fps">Feet per second (ft/s)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="fph" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="fph">Feet per hour (ft/h)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="mis" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="mis">Miles per second (mi/s)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="mih" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="mih">Miles per hour (mi/h)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="kn" placeholder="" type="number" oninput="SpeeConv(this.id,this.value)"
+                  onchange="SpeeConv(this.id,this.value)"> <label for="kn">Knots (kn)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="time"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="mls" placeholder="" type="number" oninput="TimeConv(this.id,this.value)"
+                  onchange="TimeConv(this.id,this.value)"> <label for="mls">Milliseconds (ms)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="sec" placeholder="" type="number" oninput="TimeConv(this.id,this.value)"
+                  onchange="TimeConv(this.id,this.value)"> <label for="mls">Seconds (s)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="min" placeholder="" type="number" oninput="TimeConv(this.id,this.value)"
+                  onchange="TimeConv(this.id,this.value)"> <label for="mls">Minutes (min)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="h" placeholder="" type="number" oninput="TimeConv(this.id,this.value)"
+                  onchange="TimeConv(this.id,this.value)"> <label for="mls">Hours (h)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="d" placeholder="" type="number" oninput="TimeConv(this.id,this.value)"
+                  onchange="TimeConv(this.id,this.value)"> <label for="mls">Days (d)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="wk" placeholder="" type="number" oninput="TimeConv(this.id,this.value)"
+                  onchange="TimeConv(this.id,this.value)"> <label for="mls">Week (wk)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12" id="curr"><br>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="eur" placeholder="" type="number" oninput="CurrConv(this.id,this.value)"
+                  onchange="CurrConv(this.id,this.value)"> <label for="eur">EUR (Euros €)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="pou" placeholder="" type="number" oninput="CurrConv(this.id,this.value)"
+                  onchange="CurrConv(this.id,this.value)"> <label for="pou">GBP (Pounds £)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="rup" placeholder="" type="number" oninput="CurrConv(this.id,this.value)"
+                  onchange="CurrConv(this.id,this.value)"> <label for="rup">INR (Rupees ₹)</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="dol" placeholder="" type="number" oninput="CurrConv(this.id,this.value)"
+                  onchange="CurrConv(this.id,this.value)"> <label for="dol">USD (Dollars $)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
