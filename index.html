@@ -40,6 +40,47 @@
   <link rel="icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <style>
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #f5f5f5;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 80px;
+        z-index: 950;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 10px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #818181;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
     @font-face {
       font-family: 'SamsungOne 400';
       src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
@@ -76,6 +117,7 @@
       height: 55px;
       padding: 1px;
       box-shadow: none;
+      z-index: 900;
       font-family: 'SamsungOne 400';
     }
 
@@ -120,45 +162,52 @@
         delay: 50
       });
     })
-    $(document).ready(function () {
-      $('.modal').modal();
-      $('#modal').modal();
-    })
+    $(document).bind("contextmenu", function (e) {
+      return false;
+    });
   </script>
 </head>
 
-<body oncontextmenu="return false;">
+<body>
   <main>
     <div class="containr">
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul class="collection left-align container" style="border-width: 0px;">
+            <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
+              onclick="location.href='convert.html'">
+              <a href="#!"><i class="fas fa-calculator circle green"></i></a>
+              <span style="font-size: x-large;">One UI Calculator - Converter</span><br>
+              <span>Back to Home page</span>
+            </li><br>
+            <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
+              onclick="location.href='about.html'">
+              <a href="#!"><i class="fas fa-calculator circle green"></i></a>
+              <span style="font-size: x-large;">About</span><br>
+              <span>About this Website</span>
+            </li>
+            <li class="collection-item transparent"></li>
+          </ul>
+      </div>
+      <div id="main">
+          <script>
+              function openNav() {
+                  document.getElementById("mySidenav").style.width = "100%";
+              }
+
+              function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+              }
+          </script>
+            <div></div><br>
+            <div class="row">
+                <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
+                    <a href="javascript:openNav()" class="tooltipped black-text" data-position="right" data-delay="50"
+                        data-tooltip="Menu">&#9776;</a></div>
+                <div class="col s11 m11 l11"></div>
+            </div>
       <div class="oui-interaction center-align">
         <!-- Interaction area -->
-        <div class="fixed-action-btn">
-          <a class="btn-floating btn-large green btn tooltipped pulse z-depth-5 modal-trigger" data-position="left"
-            data-delay="50" data-tooltip="Menu" href="#modal">
-            <i class="fas fa-bars"></i>
-          </a>
-        </div>
-        <!--Menu-->
-        <div id="modal" class="modal bottom-sheet right-align">
-          <div class="modal-content">
-            <ul class="collection left-align" style="border-width: 0px;">
-              <li class="collection-item avatar grey lighten-2 oui-bubble z-depth-1"
-                onclick="location.href='convert.html'">
-                <a href="#!"><i class="fas fa-balance-scale circle green"></i></a>
-                <p style="font-size: x-large;">Converter</p>
-                <p>Convert Area, Length, Temperature, Volume, Mass, Data, Speed, Time, Currency in seconds</p>
-              </li>
-              <ul class="collection left-align" style="border-width: 0px;">
-                <li class="collection-item avatar grey lighten-2 oui-bubble z-depth-1"
-                  onclick="location.href='about.html'">
-                  <a href="#!"><i class="fas fa-info circle green"></i></a>
-                  <p style="font-size: x-large;">About</p>
-                  <p>About this Website</p>
-                </li>
-                <li class="collection-item transparent"></li>
-              </ul>
-          </div>
-        </div>
         <div class="oui-bubble" id="page">
           <form name="calc">
             <br>
