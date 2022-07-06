@@ -621,18 +621,18 @@ function CurrConv(source, valnum8) {
         eur.value = (valnum8 * 0.012).toFixed(3);
     }
     if (source == "dol") {
-        rup.value = (valnum8 * 78.94).toFixed(2);
-        pou.value = (valnum8 * 0.83).toFixed(2);
-        eur.value = (valnum8 * 0.96).toFixed(2);
+        rup.value = (valnum8 * 79.05).toFixed(2);
+        pou.value = (valnum8 * 0.84).toFixed(2);
+        eur.value = (valnum8 * 0.98).toFixed(2);
     }
     if (source == "pou") {
-        rup.value = (valnum8 * 94.80).toFixed(2);
-        dol.value = (valnum8 * 1.20).toFixed(2);
-        eur.value = (valnum8 * 1.15).toFixed(2);
+        rup.value = (valnum8 * 94.09).toFixed(2);
+        dol.value = (valnum8 * 1.19).toFixed(2);
+        eur.value = (valnum8 * 1.17).toFixed(2);
     }
     if (source == "eur") {
-        rup.value = (valnum8 * 82.09).toFixed(2);
-        dol.value = (valnum8 * 1.04).toFixed(2);
-        pou.value = (valnum8 * 0.87).toFixed(2);
+        rup.value = (valnum8 * 80.38).toFixed(2);
+        dol.value = (valnum8 * 1.02).toFixed(2);
+        pou.value = (valnum8 * 0.85).toFixed(2);
     }
 }
