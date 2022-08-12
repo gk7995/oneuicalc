@@ -24,7 +24,7 @@
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 80px;
-      text-align: center;
+      z-index: 950;
     }
 
     .sidenav a {
@@ -134,8 +134,14 @@
         <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
           onclick="location.href='index.html'">
           <a href="#!"><i class="fas fa-calculator circle green"></i></a>
-          <span style="font-size: x-large;">One UI Calculator - Home</span><br>
+          <span style="font-size: x-large;">Home</span><br>
           <span>Back to Home page</span>
+        </li><br>
+        <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
+          onclick="location.href='convert.html'">
+          <a href="#!"><i class="fas fa-balance-scale circle green"></i></a>
+          <span style="font-size: x-large;">Converter</span><br>
+          <span>Open Converter</span>
         </li>
         <li class="collection-item transparent"></li>
       </ul>
