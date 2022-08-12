@@ -41,44 +41,44 @@
   <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <style>
     .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #f5f5f5;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 80px;
-        z-index: 950;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #f5f5f5;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 80px;
+      z-index: 950;
     }
 
     .sidenav a {
-        padding: 8px 8px 8px 10px;
-        text-decoration: none;
-        font-size: 25px;
-        color: black;
-        display: block;
-        transition: 0.3s;
+      padding: 8px 8px 8px 10px;
+      text-decoration: none;
+      font-size: 25px;
+      color: black;
+      display: block;
+      transition: 0.3s;
     }
 
     .sidenav a:hover {
-        color: #818181;
+      color: #818181;
     }
 
     .sidenav .closebtn {
-        position: absolute;
-        top: 5px;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 10px;
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 10px;
     }
 
     @media screen and (max-height: 450px) {
-        .sidenav a {
-            font-size: 18px;
-        }
+      .sidenav a {
+        font-size: 18px;
+      }
     }
 
     @font-face {
@@ -123,6 +123,12 @@
 
     .oui-button:hover {
       box-shadow: none;
+    }
+
+    #curr {
+      text-decoration: underline dotted;
+      text-underline-position: under;
+      text-decoration-thickness: 1.5px;
     }
   </style>
   <script type="text/javascript" src="Calculator.js"></script>
@@ -172,170 +178,176 @@
   <main>
     <div class="containr">
       <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <ul class="collection left-align container" style="border-width: 0px;">
-            <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
-              onclick="location.href='convert.html'">
-              <a href="#!"><i class="fas fa-calculator circle green"></i></a>
-              <span style="font-size: x-large;">One UI Calculator - Converter</span><br>
-              <span>Back to Home page</span>
-            </li><br>
-            <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
-              onclick="location.href='about.html'">
-              <a href="#!"><i class="fas fa-calculator circle green"></i></a>
-              <span style="font-size: x-large;">About</span><br>
-              <span>About this Website</span>
-            </li>
-            <li class="collection-item transparent"></li>
-          </ul>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="collection left-align container" style="border-width: 0px;">
+          <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
+            onclick="location.href='convert.html'">
+            <a href="#!"><i class="fas fa-calculator circle green"></i></a>
+            <span style="font-size: x-large;">One UI Calculator - Converter</span><br>
+            <span>Back to Home page</span>
+          </li><br>
+          <li class="collection-item avatar grey lighten-3 oui-bubble z-depth-1" style="cursor: pointer;"
+            onclick="location.href='about.html'">
+            <a href="#!"><i class="fas fa-calculator circle green"></i></a>
+            <span style="font-size: x-large;">About</span><br>
+            <span>About this Website</span>
+          </li>
+          <li class="collection-item transparent"></li>
+        </ul>
       </div>
       <div id="main">
-          <script>
-              function openNav() {
-                  document.getElementById("mySidenav").style.width = "100%";
-              }
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+          }
 
-              function closeNav() {
-                  document.getElementById("mySidenav").style.width = "0";
-              }
-          </script>
-            <div></div><br>
-            <div class="row">
-                <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
-                    <a href="javascript:openNav()" class="tooltipped black-text" data-position="right" data-delay="50"
-                        data-tooltip="Menu">&#9776;</a></div>
-                <div class="col s11 m11 l11"></div>
-            </div>
-      <div class="oui-interaction center-align">
-        <!-- Interaction area -->
-        <div class="oui-bubble" id="page">
-          <form name="calc">
-            <br>
-            <br>
-            <input type="text" name="ans" id="number_input" readonly class="right-align"
-              style="right: 22px; font-size: 35px; border-top: none; border-left: none; border-right: none; border-bottom-width: 0px; padding-right: 2px;">
-            <div class="hide-on-med-and-up">
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br></div>
-            <a href="#!" onclick="f1()" class="input" style="right:22px; position: absolute; font-size: x-large;"><i
-                class="fas fa-backspace"></i>
-            </a>
-            <br>
-            <br>
-            <hr>
-            <div class="center-align" style="padding: 4px; font-size: 20px;">
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 clear btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="left" data-delay="50" data-tooltip="Clear" style="font-size: larger;"
-                onclick="document.calc.ans.value=''">C
-              </div>
-              <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="top" data-delay="50" data-tooltip="Brackets" style="font-size: larger;" onclick="f10()">
-                &lpar;&rpar;</div>
-              <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="top" data-delay="50" data-tooltip="Percentage" style="font-size: larger;"
-                onclick="document.calc.ans.value+='%'">&percnt;</div>
-              <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="right" data-delay="50" data-tooltip="Division" style="font-size: larger;"
-                onclick="document.calc.ans.value+='/'">
-                &divide;</div>
-              <div class="col s4 m4"></div>
-              <br>
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='7'">7</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='8'">8</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='9'">9</div>
-              <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="right" data-delay="50" data-tooltip="Multiplication" style="font-size: larger;"
-                onclick="document.calc.ans.value+='*'">&times;</div>
-              <div class="col s4 m4"></div>
-              <br>
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='4'">4</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='5'">5</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='6'">6</div>
-              <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="right" data-delay="50" data-tooltip="Minus" style="font-size: larger;"
-                onclick="document.calc.ans.value+='-'">
-                &minus;
-              </div>
-              <div class="col s4 m4"></div>
-              <br>
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='1'">1</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='2'">2</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='3'">3</div>
-              <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="right" data-delay="50" data-tooltip="Plus" style="font-size: larger;"
-                onclick="document.calc.ans.value+='+'">
-                &plus;
-              </div>
-              <div class="col s4 m4"></div>
-              <br>
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="f3()">
-                &#177;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='0'">0</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
-                onclick="document.calc.ans.value+='.'">.</div>
-              <div class="oui-button col s1 m1 equal btn-large green tooltipped waves-effect" data-position="right"
-                data-delay="50" data-tooltip="Equal" style="font-size: larger;"
-                onclick="document.calc.ans.value = eval(document.calc.ans.value)">&equals;</div>
-              <div class="col s4 m4"></div>
-              <hr style="border: dashed 0.5px black;">
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="left" data-delay="50" data-tooltip="Inverse" style="font-size: larger;" onclick="f9()">
-                &#8543;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="bottom" data-delay="50" data-tooltip="Exponent" style="font-size: larger;"
-                onclick="document.calc.ans.value+='**'">&#94;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="bottom" data-delay="50" data-tooltip="Pi" style="font-size: larger;" onclick="f6()">
-                &#8508;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="right" data-delay="50" data-tooltip="Factorial" style="font-size: larger;"
-                onclick="f4()">!</div>
-              <div class="col s4 m4"></div>
-              <br>
-              <div class="col s4 m4"></div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="left" data-delay="50" data-tooltip="Square" style="font-size: larger;" onclick="f5()">
-                &sup2;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="bottom" data-delay="50" data-tooltip="Cube" style="font-size: larger;" onclick="f8()">
-                &sup3;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="bottom" data-delay="50" data-tooltip="Square root" style="font-size: larger;"
-                onclick="f2()">&#8730;</div>
-              <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
-                data-position="right" data-delay="50" data-tooltip="Cube root" style="font-size: larger;"
-                onclick="f7()">&#8731;</div>
-              <div class="col s4 m4"></div>
-            </div>
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+        <div></div><br>
+        <div class="row">
+          <div class="col s1 m1 l1 left-align show-on-small hide-on-med-and-up" style="font-size: x-large;">
+            <a href="javascript:openNav()" class="tooltipped black-text" data-position="right" data-delay="50"
+              data-tooltip="Menu">&#9776;</a></div>
+          <div class="col s11 m11 l11"></div>
+          <div class="show-on-medium-and-up hide-on-small-only center" style="font-size: large;">
+            <a href="#!" class="col m4 l4 green-text"><span id="curr">Home</span></a>
+            <a href="convert.html" class="col m4 l4 black-text">Converter</a>
+            <a href="about.html" class="col m4 l4 black-text">About</a>
+          </div>
         </div>
-        </form>
+        <div class="oui-interaction center-align">
+          <!-- Interaction area -->
+          <div class="oui-bubble" id="page">
+            <form name="calc">
+              <br>
+              <br>
+              <input type="text" name="ans" id="number_input" readonly class="right-align"
+                style="right: 22px; font-size: 35px; border-top: none; border-left: none; border-right: none; border-bottom-width: 0px; padding-right: 2px;">
+              <div class="hide-on-med-and-up">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br></div>
+              <a href="#!" onclick="f1()" class="input" style="right:22px; position: absolute; font-size: x-large;"><i
+                  class="fas fa-backspace"></i>
+              </a>
+              <br>
+              <br>
+              <hr>
+              <div class="center-align" style="padding: 4px; font-size: 20px;">
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 clear btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="left" data-delay="50" data-tooltip="Clear" style="font-size: larger;"
+                  onclick="document.calc.ans.value=''">C
+                </div>
+                <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="top" data-delay="50" data-tooltip="Brackets" style="font-size: larger;"
+                  onclick="f10()">
+                  &lpar;&rpar;</div>
+                <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="top" data-delay="50" data-tooltip="Percentage" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='%'">&percnt;</div>
+                <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="right" data-delay="50" data-tooltip="Division" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='/'">
+                  &divide;</div>
+                <div class="col s4 m4"></div>
+                <br>
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='7'">7</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='8'">8</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='9'">9</div>
+                <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="right" data-delay="50" data-tooltip="Multiplication" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='*'">&times;</div>
+                <div class="col s4 m4"></div>
+                <br>
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='4'">4</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='5'">5</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='6'">6</div>
+                <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="right" data-delay="50" data-tooltip="Minus" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='-'">
+                  &minus;
+                </div>
+                <div class="col s4 m4"></div>
+                <br>
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='1'">1</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='2'">2</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='3'">3</div>
+                <div class="oui-button col s1 m1 operate btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="right" data-delay="50" data-tooltip="Plus" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='+'">
+                  &plus;
+                </div>
+                <div class="col s4 m4"></div>
+                <br>
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="f3()">
+                  &#177;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='0'">0</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 waves-effect" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='.'">.</div>
+                <div class="oui-button col s1 m1 equal btn-large green tooltipped waves-effect" data-position="right"
+                  data-delay="50" data-tooltip="Equal" style="font-size: larger;"
+                  onclick="document.calc.ans.value = eval(document.calc.ans.value)">&equals;</div>
+                <div class="col s4 m4"></div>
+                <hr style="border: dashed 0.5px black;">
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="left" data-delay="50" data-tooltip="Inverse" style="font-size: larger;" onclick="f9()">
+                  &#8543;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="bottom" data-delay="50" data-tooltip="Exponent" style="font-size: larger;"
+                  onclick="document.calc.ans.value+='**'">&#94;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="bottom" data-delay="50" data-tooltip="Pi" style="font-size: larger;" onclick="f6()">
+                  &#8508;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="right" data-delay="50" data-tooltip="Factorial" style="font-size: larger;"
+                  onclick="f4()">!</div>
+                <div class="col s4 m4"></div>
+                <br>
+                <div class="col s4 m4"></div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="left" data-delay="50" data-tooltip="Square" style="font-size: larger;" onclick="f5()">
+                  &sup2;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="bottom" data-delay="50" data-tooltip="Cube" style="font-size: larger;" onclick="f8()">
+                  &sup3;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="bottom" data-delay="50" data-tooltip="Square root" style="font-size: larger;"
+                  onclick="f2()">&#8730;</div>
+                <div class="oui-button col s1 m1 input btn-large grey lighten-4 tooltipped waves-effect"
+                  data-position="right" data-delay="50" data-tooltip="Cube root" style="font-size: larger;"
+                  onclick="f7()">&#8731;</div>
+                <div class="col s4 m4"></div>
+              </div>
+          </div>
+          </form>
+        </div>
+        <br>
       </div>
-      <br>
-    </div>
   </main>
   <script>
     if ('serviceWorker' in navigator) {
