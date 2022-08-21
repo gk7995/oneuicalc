@@ -617,22 +617,22 @@ function CurrConv(source, valnum8) {
     var pou = document.getElementById("pou");
     if (source == "rup") {
         dol.value = (valnum8 * 0.013).toFixed(3);
-        pou.value = (valnum8 * 0.010).toFixed(4);
+        pou.value = (valnum8 * 0.011).toFixed(4);
         eur.value = (valnum8 * 0.012).toFixed(3);
     }
     if (source == "dol") {
-        rup.value = (valnum8 * 79.65).toFixed(2);
-        pou.value = (valnum8 * 0.83).toFixed(2);
-        eur.value = (valnum8 * 0.98).toFixed(2);
+        rup.value = (valnum8 * 79.93).toFixed(2);
+        pou.value = (valnum8 * 0.85).toFixed(2);
+        eur.value = (valnum8 * 1.00).toFixed(2);
     }
     if (source == "pou") {
-        rup.value = (valnum8 * 96.49).toFixed(2);
-        dol.value = (valnum8 * 1.21).toFixed(2);
+        rup.value = (valnum8 * 94.55).toFixed(2);
+        dol.value = (valnum8 * 1.18).toFixed(2);
         eur.value = (valnum8 * 1.18).toFixed(2);
     }
     if (source == "eur") {
-        rup.value = (valnum8 * 81.67).toFixed(2);
-        dol.value = (valnum8 * 1.03).toFixed(2);
+        rup.value = (valnum8 * 80.22).toFixed(2);
+        dol.value = (valnum8 * 1.00).toFixed(2);
         pou.value = (valnum8 * 0.85).toFixed(2);
     }
 }
