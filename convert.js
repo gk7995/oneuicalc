@@ -616,23 +616,23 @@ function CurrConv(source, valnum8) {
     var dol = document.getElementById("dol");
     var pou = document.getElementById("pou");
     if (source == "rup") {
-        dol.value = (valnum8 * 0.013).toFixed(3);
+        dol.value = (valnum8 * 0.012).toFixed(3);
         pou.value = (valnum8 * 0.011).toFixed(4);
         eur.value = (valnum8 * 0.013).toFixed(3);
     }
     if (source == "dol") {
-        rup.value = (valnum8 * 79.73).toFixed(2);
-        pou.value = (valnum8 * 0.88).toFixed(2);
-        eur.value = (valnum8 * 1.00).toFixed(2);
+        rup.value = (valnum8 * 81.26).toFixed(2);
+        pou.value = (valnum8 * 0.92).toFixed(2);
+        eur.value = (valnum8 * 1.03).toFixed(2);
     }
     if (source == "pou") {
-        rup.value = (valnum8 * 90.71).toFixed(2);
-        dol.value = (valnum8 * 1.14).toFixed(2);
-        eur.value = (valnum8 * 1.14).toFixed(2);
+        rup.value = (valnum8 * 88.23).toFixed(2);
+        dol.value = (valnum8 * 1.09).toFixed(2);
+        eur.value = (valnum8 * 1.12).toFixed(2);
     }
     if (source == "eur") {
-        rup.value = (valnum8 * 79.66).toFixed(2);
-        dol.value = (valnum8 * 1.00).toFixed(2);
-        pou.value = (valnum8 * 0.88).toFixed(2);
+        rup.value = (valnum8 * 78.74).toFixed(2);
+        dol.value = (valnum8 * 0.97).toFixed(2);
+        pou.value = (valnum8 * 0.89).toFixed(2);
     }
 }
