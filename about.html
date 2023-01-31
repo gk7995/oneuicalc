@@ -40,6 +40,10 @@
       font-family: 'SamsungOne 400';
     }
 
+    .dropdown-content {
+      border-radius: 15px;
+    }
+
     #curr {
       text-decoration: underline dotted;
       text-underline-position: under;
@@ -70,14 +74,21 @@
     <div id="main">
       <div class="oui-viewing center-align">
         <h4>One UI Calculator</h4>
-        <h5 class="grey-text text-darken-1">Version 2022.3.2</h5>
+        <h5 class="grey-text text-darken-1">Version 2023.3.3</h5>
       </div>
       <div></div><br>
       <div class="row">
-        <div class="center" style="font-size: large;">
-          <a href="index.html" class="col s4 m4 l4 black-text">Home</a>
-          <a href="convert.html" class="col s4 m4 l4 black-text">Converter</a>
-          <a href="#!" class="col s4 m4 l4 green-text"><span id="curr">About</span></a>
+        <div style="font-size: large;">
+          <a href="#!" class="dropdown-button col s5 m3 l2 black-text" data-belowOrigin="true" data-gutter="10"
+            data-constrainWidth="true" data-activates="dd1">&#9776;</a>
+          <ul id="dd1" class="dropdown-content">
+            <li><a href="index.html" class="black-text"><i class="fa-solid fa-home"></i>Home</a></li>
+            <li class="divider"></li>
+            <li><a href="convert.html" class="black-text"><i class="fa-solid fa-scale-balanced"></i>Converter</a></li>
+            <li class="divider"></li>
+            <li><a href="#!" class="green-text"><i class="fa-solid fa-circle-info"></i><span id="curr">About</span></a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="oui-interaction center-align">
@@ -105,6 +116,10 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>2023.3.3</td>
+                <td>Added NEW Hamburger Menu, click on the top left 3 vertical lines to open</td>
+              </tr>
               <tr>
                 <td>2022.3.2</td>
                 <td>Removed Mobile Hamburger Menu</td>
@@ -222,7 +237,7 @@
           </div>
           </form>
         </div>
-        <p class="grey-text text-darken-1">&copy; 2022, All Rights reserved.</p>
+        <p class="grey-text text-darken-1">&copy; 2023, All Rights reserved.</p>
       </div>
   </main>
   <script>

@@ -84,6 +84,10 @@
       box-shadow: none;
     }
 
+    .dropdown-content {
+      border-radius: 15px;
+    }
+
     #curr {
       text-decoration: underline dotted;
       text-underline-position: under;
@@ -115,10 +119,16 @@
       <div id="main">
         <div></div><br>
         <div class="row">
-          <div class="center" style="font-size: large;">
-            <a href="#!" class="col s4 m4 l4 green-text"><span id="curr">Home</span></a>
-            <a href="convert.html" class="col s4 m4 l4 black-text">Converter</a>
-            <a href="about.html" class="col s4 m4 l4 black-text">About</a>
+          <div style="font-size: large;">
+            <a href="#!" class="dropdown-button col s5 m3 l2 black-text" data-belowOrigin="true" data-gutter="10"
+              data-constrainWidth="true" data-activates="dd1">&#9776;</a>
+            <ul id="dd1" class="dropdown-content">
+              <li><a href="#!" class="green-text"><i class="fa-solid fa-home"></i><span id="curr">Home</span></a></li>
+              <li class="divider"></li>
+              <li><a href="convert.html" class="black-text"><i class="fa-solid fa-scale-balanced"></i>Converter</a></li>
+              <li class="divider"></li>
+              <li><a href="about.html" class="black-text"><i class="fa-solid fa-circle-info"></i>About</a></li>
+            </ul>
           </div>
         </div>
         <div class="oui-interaction center-align">
